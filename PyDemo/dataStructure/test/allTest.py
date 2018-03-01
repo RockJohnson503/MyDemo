@@ -20,9 +20,11 @@ if __name__ == '__main__':
     # star = datetime.datetime.now()
     # print(lin + [i for i in range(10**5)])
     # print(datetime.datetime.now() - star)
-    # arr = ArrayBag([1, 2, 3, 1])
+    arr = LinkedBag([1, 5])
     # arr2 = ArrayBag([1, 1, 3, 2])
     # arr3 = ArraySortedBag([1, 2 ,3])
     # arr3.remove(2)
     # print(arr3)
+    arr.clear()
+    print(type(arr))
     pass

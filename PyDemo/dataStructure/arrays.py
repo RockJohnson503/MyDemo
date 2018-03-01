@@ -11,8 +11,7 @@ class Array(object):
         """Capacity是一个静态大小的数组.
         fillValue是放置的每个位置"""
         self._items = list()
-        for count in range(capacity):
-            self._items.append(fillValue)
+        for count in range(capacity): self._items.append(fillValue)
 
     def __len__(self):
         """返回数组的容量"""

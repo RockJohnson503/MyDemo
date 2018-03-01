@@ -4,44 +4,17 @@
 File: arraybag.py
 Author: Rock Johnson
 """
-from dataStructure.arrays import Array
+from dataStructure.abstractbag import AbstractBag
 
-class ArrayBag(object):
+class ArrayBag(AbstractBag):
     """基于array的bag实现."""
 
     # 构造函数
     def __init__(self, sourceCollection = None):
         """初始状态,其中包括sourceCollection的内容(如果存在)."""
-        self._items = Array(0)
-        self._size = 0
-        if sourceCollection:
-            for item in sourceCollection:
-                self.add(item)
+        AbstractBag.__init__(self, sourceCollection)
 
     # 进行访问的方法
-    def isEmpty(self):
-        """当len(self) == 0时返回True,否则返回False."""
-        return self._size == 0
-
-    def __len__(self):
-        """返回self的长度."""
-        return self._size
-
-    def __str__(self):
-        """将self以字符串的形式表现."""
-        mid = ""
-        for i, item in enumerate(self):
-            if i == 0:
-                if isinstance(item, str):
-                    mid += "'" + str(item) + "'"
-                else:
-                    mid += str(item)
-            elif isinstance(item, str):
-                mid += ", '" + str(item) + "'"
-            else:
-                mid += ", " + str(item)
-        return "[" + mid + "]"
-
     def __iter__(self):
         """支持将self进行迭代."""
         cursor = 0
@@ -49,28 +22,7 @@ class ArrayBag(object):
             yield  self._items[cursor]
             cursor += 1
 
-    def __add__(self, other):
-        """返回一个包含self以及other的新bag."""
-        result = ArrayBag(self)
-        for item in other:
-            result.add(item)
-        return result
-
-    def __eq__(self, other):
-        """当self等于other时返回True,否者返回False."""
-        if self is other: return True
-        if type(self) != type(other) or \
-            len(self) != len(other): return  False
-        for item in zip(self, other):
-            if item[0] != item[1]: return False
-        return True
-
     # 赋值的函数
-    def clear(self):
-        """使self变为空的."""
-        self._size = 0
-        self._items = Array(0)
-
     def add(self, item):
         """将item添加进self."""
         self._items.add()

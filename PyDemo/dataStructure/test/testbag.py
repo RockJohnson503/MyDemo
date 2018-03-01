@@ -23,10 +23,10 @@ def test(bagType):
     for item in b1:
         print(item)
     b1.clear()
-    print("Expect [] or null: ", b1)
+    print("Expect {}: ", b1)
     b1.add(25)
     b1.remove(25)
-    print("Expect [] or null: ", b1)
+    print("Expect {}: ", b1)
     b1 = bagType(lyst)
     b2 = bagType(b1)
     print("Expect True: ", b1 == b2)
@@ -34,14 +34,14 @@ def test(bagType):
     print("Expect two of each item: ", b1 + b2)
     for item in lyst:
         b1.remove(item)
-    print("Expect [] or null: ", b1)
+    print("Expect {}: ", b1)
     # print("Expect crash with KeyError: ")
     # b2.remove(99)
 
 if __name__ == '__main__':
     star = datetime.now()
     # test(ArrayBag)
-    # test(LinkedBag)
-    test(ArraySortedBag)
+    test(LinkedBag)
+    # test(ArraySortedBag)
     print(datetime.now() - star)
     pass
