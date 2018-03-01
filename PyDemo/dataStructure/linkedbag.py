@@ -53,3 +53,7 @@ class LinkedBag(AbstractBag):
             trailer.next = probe.next
         # 递减逻辑大小
         self._size -= 1
+
+    def clone(self):
+        """返回一个当前运行对象的完整副本"""
+        return LinkedBag(LinkedBag(self))

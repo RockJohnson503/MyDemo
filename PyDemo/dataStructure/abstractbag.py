@@ -20,7 +20,14 @@ class AbstractBag(AbstractCollection):
 
     # 进行访问的方法
     def __str__(self):
-        return "{" + ", ".join(map(str, self)) + "}"
+        mid = ""
+        for i, item in enumerate(self):
+            if i == 0:
+                if isinstance(item, str): mid += "'" + str(item) + "'"
+                else:                     mid += str(item)
+            elif isinstance(item, str):   mid += ", '" + str(item) + "'"
+            else:                         mid += ", " + str(item)
+        return "{" + mid + "}"
 
     # 赋值的函数
     def clear(self):

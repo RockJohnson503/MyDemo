@@ -38,3 +38,8 @@ class AbstractCollection(object):
         for item in zip(self, other):
             if item[0] != item[1]: return False
         return True
+
+    # 赋值的函数
+    def clone(self):
+        """返回一个当前运行对象的完整副本"""
+        return type(self)(self)
