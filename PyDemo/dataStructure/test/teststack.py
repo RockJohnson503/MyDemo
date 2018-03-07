@@ -31,5 +31,6 @@ def test(stackType):
     print("Empty: ", s.isEmpty())
 
 if __name__ == '__main__':
+    # test(ArrayStack)
     test(LinkedStack)
     pass
