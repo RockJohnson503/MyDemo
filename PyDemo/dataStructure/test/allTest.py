@@ -4,12 +4,13 @@
 File: allTest.py
 Author: Rock Johnson
 """
-import datetime
-from dataStructure.arraybag import ArrayBag
-from dataStructure.linkedbag import LinkedBag
-from dataStructure.arraystack import ArrayStack
-from dataStructure.linkedstack import LinkedStack
-from dataStructure.arraysortedbag import ArraySortedBag
+from dataStructure.arrays.arraybag import ArrayBag
+from dataStructure.arrays.arraystack import ArrayStack
+from dataStructure.arrays.arrayqueue import ArrayQueue
+from dataStructure.linkeds.linkedbag import LinkedBag
+from dataStructure.linkeds.linkedstack import LinkedStack
+from dataStructure.linkeds.linkedqueue import LinkedQueue
+from dataStructure.arrays.arraysortedbag import ArraySortedBag
 
 if __name__ == '__main__':
     # dt = [1]
@@ -32,7 +33,26 @@ if __name__ == '__main__':
     # lst = [1, 2, 3]
     # lst.clear()
     # print(lst)
-    arr = ArrayBag()
-    arr.clear()
+    arr = LinkedStack()
+    print(arr)
+    arr.push("a")
+    print(arr)
+    arr.push("b")
+    print(arr)
+    arr.push("c")
+    print(arr)
+    print(arr.isEmpty())
+    print(len(arr))
+    print(arr.peek())
+    print(arr.pop())
+    print(arr)
+    print(arr.pop())
+    print(arr)
+    print(arr.pop())
+    print(arr)
+    print(arr.isEmpty())
+    # print(arr.peek())
+    # print(arr.pop())
+    arr.add("d")
     print(arr)
     pass

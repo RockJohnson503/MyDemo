@@ -4,8 +4,7 @@
 File: teststack.py
 Author: Rock Johnson
 """
-from dataStructure.arraystack import ArrayStack
-from dataStructure.linkedstack import LinkedStack
+from dataStructure.linkeds.linkedstack import LinkedStack
 
 def test(stackType):
     # Test any implementation with the same code

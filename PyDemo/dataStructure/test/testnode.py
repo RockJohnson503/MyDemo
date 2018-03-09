@@ -4,7 +4,7 @@
 File: testnode.py
 Author: Rock Johnson
 """
-from dataStructure.node import Node
+from dataStructure.linkeds.node import Node
 
 head = None
 
