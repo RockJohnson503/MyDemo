@@ -15,13 +15,6 @@ class ArrayQueue(AbstractQueue):
         AbstractQueue.__init__(self, sourceCollection)
 
     # 进行访问的方法
-    def __iter__(self):
-        """支持将self进行迭代."""
-        cursor = 0
-        while cursor < self._size:
-            yield self._items[cursor]
-            cursor += 1
-
     def peek(self):
         """返回queue的队头项.
         前提: queue不是空的.

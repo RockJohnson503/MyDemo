@@ -4,13 +4,17 @@
 File: allTest.py
 Author: Rock Johnson
 """
+import random
+from dataStructure.wrapper.comparable import Comparable
 from dataStructure.arrays.arraybag import ArrayBag
 from dataStructure.arrays.arraystack import ArrayStack
 from dataStructure.arrays.arrayqueue import ArrayQueue
+from dataStructure.arrays.arraylist import ArrayList
 from dataStructure.linkeds.linkedbag import LinkedBag
 from dataStructure.linkeds.linkedstack import LinkedStack
 from dataStructure.linkeds.linkedqueue import LinkedQueue
 from dataStructure.arrays.arraysortedbag import ArraySortedBag
+from dataStructure.linkeds.linkedpriorityqueue import LinkedPriorityQueue
 
 if __name__ == '__main__':
     # dt = [1]
@@ -33,26 +37,35 @@ if __name__ == '__main__':
     # lst = [1, 2, 3]
     # lst.clear()
     # print(lst)
-    arr = LinkedStack()
-    print(arr)
-    arr.push("a")
-    print(arr)
-    arr.push("b")
-    print(arr)
-    arr.push("c")
-    print(arr)
-    print(arr.isEmpty())
-    print(len(arr))
-    print(arr.peek())
-    print(arr.pop())
-    print(arr)
-    print(arr.pop())
-    print(arr)
-    print(arr.pop())
-    print(arr)
-    print(arr.isEmpty())
+    # arr = ArrayQueue()
+    # print(arr)
+    # arr.add("a")
+    # print(arr)
+    # arr.add("b")
+    # print(arr)
+    # arr.add("c")
+    # print(arr)
+    # print(arr.isEmpty())
+    # print(len(arr))
     # print(arr.peek())
     # print(arr.pop())
-    arr.add("d")
-    print(arr)
+    # print(arr)
+    # print(arr.pop())
+    # print(arr)
+    # print(arr.pop())
+    # print(arr)
+    # print(arr.isEmpty())
+    # print(arr.peek())
+    # print(arr.pop())
+    # arr.add("d")
+    # print(arr)
+    # q = LinkedPriorityQueue([Comparable(i, random.randrange(100)) for i in range(10**4)])
+    # print(q)
+    ls = [1, 2, 3, 4]
+    ls.insert(5, 0)
+    print(ls)
+    l = ArrayList([1, 2, 3])
+    print(l)
+    l[2] = 4
+    print(l)
     pass

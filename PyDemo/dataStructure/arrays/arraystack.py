@@ -15,13 +15,6 @@ class ArrayStack(AbstractStack):
         AbstractStack.__init__(self, sourceCollection)
 
     # 进行访问的方法
-    def __iter__(self):
-        """支持将self进行迭代."""
-        cursor = 0
-        while cursor < self._size:
-            yield self._items[cursor]
-            cursor += 1
-
     def peek(self):
         """返回stack的顶部元素.
         前提: stack不是空的.

@@ -21,7 +21,8 @@
     <SUITE FILE_PATH="coverage/PyDemo$Twisted_Trial_for_testbag_test.coverage" NAME="Twisted Trial for testbag.test Coverage Results" MODIFIED="1519374305134" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataStructure/test" />
     <SUITE FILE_PATH="coverage/PyDemo$Twisted_Trial_in_teststack_py.coverage" NAME="Twisted Trial in teststack.py Coverage Results" MODIFIED="1520396565795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataStructure/test" />
     <SUITE FILE_PATH="coverage/PyDemo$run__1_.coverage" NAME="run (1) Coverage Results" MODIFIED="1516758665104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithm" />
-    <SUITE FILE_PATH="coverage/PyDemo$allTest.coverage" NAME="allTest Coverage Results" MODIFIED="1520501271414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataStructure/test" />
+    <SUITE FILE_PATH="coverage/PyDemo$testlist.coverage" NAME="testlist Coverage Results" MODIFIED="1520585845595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataStructure/test" />
+    <SUITE FILE_PATH="coverage/PyDemo$allTest.coverage" NAME="allTest Coverage Results" MODIFIED="1520577866830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataStructure/test" />
     <SUITE FILE_PATH="coverage/PyDemo$pushDemo.coverage" NAME="pushDemo Coverage Results" MODIFIED="1519808497100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/task" />
     <SUITE FILE_PATH="coverage/PyDemo$demo.coverage" NAME="demo Coverage Results" MODIFIED="1520471540360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithm" />
     <SUITE FILE_PATH="coverage/PyDemo$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1516865177434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OAMOA/demo1" />
@@ -48,77 +49,53 @@
       <file leaf-file-name="abstractcollection.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dataStructure/abstracts/abstractcollection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="44" />
+            <state relative-caret-position="-261">
+              <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="abstractbag.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dataStructure/abstracts/abstractbag.py">
+      <file leaf-file-name="abstractlist.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dataStructure/abstracts/abstractlist.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="20" selection-end-column="54" />
+            <state relative-caret-position="189">
+              <caret line="42" column="19" lean-forward="false" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="19" />
               <folding>
-                <element signature="e#69#114#0" expanded="true" />
+                <element signature="e#70#115#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="abstractstack.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dataStructure/abstracts/abstractstack.py">
+      <file leaf-file-name="arraylist.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dataStructure/arrays/arraylist.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+            <state relative-caret-position="225">
+              <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
               <folding>
-                <element signature="e#71#116#0" expanded="true" />
+                <element signature="e#67#135#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="abstractqueue.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dataStructure/abstracts/abstractqueue.py">
+      <file leaf-file-name="arraylistiterator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dataStructure/arrays/arraylistiterator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="54" lean-forward="true" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
-              <folding>
-                <element signature="e#71#116#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="arrayqueue.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dataStructure/arrays/arrayqueue.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="21" column="37" lean-forward="true" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+            <state relative-caret-position="744">
+              <caret line="52" column="66" lean-forward="false" selection-start-line="52" selection-start-column="66" selection-end-line="52" selection-end-column="66" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="arrays.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dataStructure/arrays/arrays.py">
+      <file leaf-file-name="testlist.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dataStructure/test/testlist.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+            <state relative-caret-position="150">
+              <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="linkedqueue.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dataStructure/linkeds/linkedqueue.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding>
-                <element signature="e#69#112#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -126,10 +103,10 @@
       <file leaf-file-name="allTest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dataStructure/test/allTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="42" column="14" lean-forward="true" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+            <state relative-caret-position="339">
+              <caret line="68" column="12" lean-forward="true" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="12" />
               <folding>
-                <element signature="e#65#115#0" expanded="true" />
+                <element signature="e#65#78#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -151,14 +128,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/CollectionsOverView/chapter2/tuple_testx.py" />
-        <option value="$PROJECT_DIR$/CollectionsOverView/chapter3/namedtuple_test.py" />
-        <option value="$PROJECT_DIR$/hacker/test.py" />
-        <option value="$PROJECT_DIR$/tensorflowDemo/tensorflow_test.py" />
-        <option value="$PROJECT_DIR$/advProgramming/test/run.py" />
-        <option value="$PROJECT_DIR$/CollectionsOverView/chapter1/collection_overview.py" />
-        <option value="$PROJECT_DIR$/teach/demo1/helloworld.py" />
-        <option value="$PROJECT_DIR$/teach/demo1/test.py" />
         <option value="$PROJECT_DIR$/OAMOA/demo1/install_python.py" />
         <option value="$PROJECT_DIR$/neuralNetworks/perceptron.py" />
         <option value="$PROJECT_DIR$/neuralNetworks/visualize.py" />
@@ -195,11 +164,21 @@
         <option value="$PROJECT_DIR$/dataStructure/abstracts/abstractstack.py" />
         <option value="$PROJECT_DIR$/dataStructure/abstracts/abstractqueue.py" />
         <option value="$PROJECT_DIR$/dataStructure/linkeds/linkedstack.py" />
-        <option value="$PROJECT_DIR$/dataStructure/arrays/arraystack.py" />
-        <option value="$PROJECT_DIR$/dataStructure/arrays/arrayqueue.py" />
-        <option value="$PROJECT_DIR$/dataStructure/test/allTest.py" />
-        <option value="$PROJECT_DIR$/dataStructure/abstracts/abstractcollection.py" />
         <option value="$PROJECT_DIR$/dataStructure/linkeds/linkedqueue.py" />
+        <option value="$PROJECT_DIR$/dataStructure/arrays/arrayqueue.py" />
+        <option value="$PROJECT_DIR$/dataStructure/arrays/arraybag.py" />
+        <option value="$PROJECT_DIR$/dataStructure/arrays/arraystack.py" />
+        <option value="$PROJECT_DIR$/dataStructure/demo/queue/cashier.py" />
+        <option value="$PROJECT_DIR$/dataStructure/demo/queue/customer.py" />
+        <option value="$PROJECT_DIR$/dataStructure/demo/queue/marketmodel.py" />
+        <option value="$PROJECT_DIR$/dataStructure/wrapper/comparable.py" />
+        <option value="$PROJECT_DIR$/dataStructure/linkeds/linkedpriorityqueue.py" />
+        <option value="$PROJECT_DIR$/dataStructure/abstracts/abstractcollection.py" />
+        <option value="$PROJECT_DIR$/dataStructure/abstracts/abstractlist.py" />
+        <option value="$PROJECT_DIR$/dataStructure/test/allTest.py" />
+        <option value="$PROJECT_DIR$/dataStructure/arrays/arraylist.py" />
+        <option value="$PROJECT_DIR$/dataStructure/arrays/arraylistiterator.py" />
+        <option value="$PROJECT_DIR$/dataStructure/test/testlist.py" />
       </list>
     </option>
   </component>
@@ -246,13 +225,13 @@
               <item name="PyDemo" type="b2602c69:ProjectViewProjectNode" />
               <item name="PyDemo" type="462c0819:PsiDirectoryNode" />
               <item name="dataStructure" type="462c0819:PsiDirectoryNode" />
-              <item name="arrays" type="462c0819:PsiDirectoryNode" />
+              <item name="abstracts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PyDemo" type="b2602c69:ProjectViewProjectNode" />
               <item name="PyDemo" type="462c0819:PsiDirectoryNode" />
               <item name="dataStructure" type="462c0819:PsiDirectoryNode" />
-              <item name="linkeds" type="462c0819:PsiDirectoryNode" />
+              <item name="arrays" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PyDemo" type="b2602c69:ProjectViewProjectNode" />
@@ -285,11 +264,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dataStructure/demo/stack" />
       <recent name="$PROJECT_DIR$/dataStructure/arrays" />
       <recent name="$PROJECT_DIR$/dataStructure/linkeds" />
       <recent name="$PROJECT_DIR$/dataStructure" />
       <recent name="$PROJECT_DIR$/dataStructure/nodes" />
-      <recent name="$PROJECT_DIR$/dataStructure/abstracts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -304,7 +283,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.allTest">
+  <component name="RunManager" selected="Python.testlist">
     <configuration name="allTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -337,26 +316,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PyDemo" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dataStructure/demo/brackets.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/algorithm" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PyDemo" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algorithm/demo.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dataStructure/demo/stack/brackets.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -376,6 +336,25 @@
       <module name="PyDemo" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dataStructure/test/testbag.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="testlist" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dataStructure/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PyDemo" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dataStructure/test/testlist.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -403,17 +382,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.testbag" />
       <item index="1" class="java.lang.String" itemvalue="Python.teststack" />
-      <item index="2" class="java.lang.String" itemvalue="Python.demo" />
-      <item index="3" class="java.lang.String" itemvalue="Python.allTest" />
-      <item index="4" class="java.lang.String" itemvalue="Python.brackets" />
+      <item index="2" class="java.lang.String" itemvalue="Python.allTest" />
+      <item index="3" class="java.lang.String" itemvalue="Python.brackets" />
+      <item index="4" class="java.lang.String" itemvalue="Python.testlist" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.allTest" />
-        <item index="1" class="java.lang.String" itemvalue="Python.testbag" />
-        <item index="2" class="java.lang.String" itemvalue="Python.brackets" />
-        <item index="3" class="java.lang.String" itemvalue="Python.teststack" />
-        <item index="4" class="java.lang.String" itemvalue="Python.demo" />
+        <item index="0" class="java.lang.String" itemvalue="Python.testlist" />
+        <item index="1" class="java.lang.String" itemvalue="Python.allTest" />
+        <item index="2" class="java.lang.String" itemvalue="Python.testbag" />
+        <item index="3" class="java.lang.String" itemvalue="Python.brackets" />
+        <item index="4" class="java.lang.String" itemvalue="Python.teststack" />
       </list>
     </recent_temporary>
   </component>
@@ -527,21 +506,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../.local/lib/python3.6/site-packages/matplotlib/text.py" />
-    <entry file="file://$PROJECT_DIR$/../../.local/lib/python3.6/site-packages/matplotlib/axes/_axes.py" />
-    <entry file="file://$PROJECT_DIR$/../../.local/lib/python3.6/site-packages/matplotlib/pyplot.py" />
-    <entry file="file:///usr/lib/python3.6/timeit.py" />
-    <entry file="file://$PROJECT_DIR$/algorithm/ht.html" />
-    <entry file="file:///usr/lib/python3.6/bisect.py" />
-    <entry file="file://$USER_HOME$/.PyCharm2017.3/system/python_stubs/-1247971763/_collections.py" />
-    <entry file="file://$PROJECT_DIR$/CollectionsOverView/charpter4/defaultdict_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../.local/lib/python3.6/site-packages/tensorflow/python/client/session.py" />
     <entry file="file:///usr/lib/python3.6/functools.py" />
     <entry file="file://$PROJECT_DIR$/algorithm/algorithms.py" />
     <entry file="file:///usr/lib/python3.6/random.py" />
@@ -654,14 +618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.3/system/python_stubs/1800468354/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="217" column="61" lean-forward="true" selection-start-line="217" selection-start-column="61" selection-end-line="217" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dataStructure/funtools/func.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -678,24 +634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dataStructure/demo/brackets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="52" lean-forward="true" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataStructure/linkeds/linkedbag.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="27" lean-forward="true" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
-          <folding>
-            <element signature="e#67#110#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dataStructure/test/testbag.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-201">
@@ -706,26 +644,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dataStructure/arrays/arraysortedbag.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="77" column="24" lean-forward="true" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dataStructure/linkeds/node.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataStructure/arrays/arraybag.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="23" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -740,7 +662,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dataStructure/linkeds/linkedstack.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-45">
+        <state relative-caret-position="285">
           <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
           <folding>
             <element signature="e#69#112#0" expanded="true" />
@@ -748,11 +670,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dataStructure/arrays/arraystack.py">
+    <entry file="file://$PROJECT_DIR$/dataStructure/linkeds/linkedbag.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="21" column="37" lean-forward="true" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+        <state relative-caret-position="153">
+          <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+          <folding>
+            <element signature="e#67#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataStructure/demo/stack/brackets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="52" lean-forward="true" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataStructure/demo/queue/customer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataStructure/demo/queue/cashier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-81">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataStructure/demo/queue/marketmodel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6">
+          <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+          <folding>
+            <element signature="e#69#121#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2017.3/system/python_stubs/1800468354/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8895">
+          <caret line="736" column="30" lean-forward="false" selection-start-line="736" selection-start-column="30" selection-end-line="736" selection-end-column="30" />
+          <folding>
+            <element signature="e#145#209#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataStructure/linkeds/linkedqueue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="37" column="8" lean-forward="true" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="30" />
+          <folding>
+            <element signature="e#69#112#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataStructure/wrapper/comparable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="21" column="49" lean-forward="true" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataStructure/abstracts/abstractqueue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="19" column="54" lean-forward="true" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataStructure/linkeds/linkedpriorityqueue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="35" column="38" lean-forward="true" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
+          <folding>
+            <element signature="e#77#120#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -766,28 +770,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dataStructure/abstracts/abstractqueue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="54" lean-forward="true" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
-          <folding>
-            <element signature="e#71#116#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataStructure/arrays/arrayqueue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="21" column="37" lean-forward="true" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dataStructure/abstracts/abstractbag.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="20" selection-end-column="54" />
+        <state relative-caret-position="285">
+          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="20" />
           <folding>
             <element signature="e#69#114#0" expanded="true" />
           </folding>
@@ -796,36 +782,94 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dataStructure/arrays/arrays.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+        <state relative-caret-position="228">
+          <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dataStructure/test/allTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="42" column="14" lean-forward="true" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+        <state relative-caret-position="339">
+          <caret line="68" column="12" lean-forward="true" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="12" />
           <folding>
-            <element signature="e#65#115#0" expanded="true" />
+            <element signature="e#65#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataStructure/test/testlist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataStructure/abstracts/abstractlist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="42" column="19" lean-forward="false" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="19" />
+          <folding>
+            <element signature="e#70#115#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dataStructure/abstracts/abstractcollection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="44" />
+        <state relative-caret-position="-261">
+          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dataStructure/linkeds/linkedqueue.py">
+    <entry file="file://$PROJECT_DIR$/dataStructure/arrays/arraybag.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="-36">
+          <caret line="16" column="4" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataStructure/arrays/arrayqueue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="42" column="23" lean-forward="true" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataStructure/arrays/arraysortedbag.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1065">
+          <caret line="71" column="30" lean-forward="true" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataStructure/arrays/arraystack.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-141">
+          <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataStructure/arrays/arraylistiterator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="52" column="66" lean-forward="false" selection-start-line="52" selection-start-column="66" selection-end-line="52" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataStructure/arrays/arraylist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
           <folding>
-            <element signature="e#69#112#0" expanded="true" />
+            <element signature="e#67#135#0" expanded="true" />
           </folding>
         </state>
       </provider>

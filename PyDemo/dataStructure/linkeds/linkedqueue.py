@@ -19,8 +19,7 @@ class LinkedQueue(AbstractQueue):
 
     # 进行访问的方法
     def __iter__(self):
-        """支持将self进行迭代.
-        从queue的队头到队尾访问items."""
+        """支持将self进行迭代."""
         probe = self._front
         while probe != None:
             yield probe.data

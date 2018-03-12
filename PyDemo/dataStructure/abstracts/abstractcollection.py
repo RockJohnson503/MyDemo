@@ -19,7 +19,11 @@ class AbstractCollection(object):
             self._items = Array(0)
         self._size = 0
         if sourceCollection:
-            for item in sourceCollection: self.add(item)
+            for item in sourceCollection:
+                if "List" not in self._type:
+                    self.add(item)
+                else:
+                    self.append(item)
 
     # 进行访问的方法
     def isEmpty(self):
@@ -34,7 +38,10 @@ class AbstractCollection(object):
         """返回一个包含self以及other的新数据结构."""
         result = type(self)(self)
         for item in other:
-            result.add(item)
+            if "List" not in self._type:
+                result.add(item)
+            else:
+                result.append(item)
         return result
 
     def __eq__(self, other):
@@ -45,6 +52,13 @@ class AbstractCollection(object):
         for item in zip(self, other):
             if item[0] != item[1]: return False
         return True
+
+    def __iter__(self):
+        """支持将self进行迭代."""
+        cursor = 0
+        while cursor < self._size:
+            yield self._items[cursor]
+            cursor += 1
 
     # 赋值的函数
     def clone(self):

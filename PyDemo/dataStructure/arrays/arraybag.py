@@ -14,14 +14,6 @@ class ArrayBag(AbstractBag):
         """初始状态,其中包括sourceCollection的内容(如果存在)."""
         AbstractBag.__init__(self, sourceCollection)
 
-    # 进行访问的方法
-    def __iter__(self):
-        """支持将self进行迭代."""
-        cursor = 0
-        while cursor < self._size:
-            yield  self._items[cursor]
-            cursor += 1
-
     # 赋值的函数
     def add(self, item):
         """将item添加进self."""
