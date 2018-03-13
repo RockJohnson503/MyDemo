@@ -4,9 +4,9 @@
 File: linkedlist.py
 Author: Rock Johnson
 """
+from dataStructure.funtools.func import treatSlice
 from dataStructure.linkeds.node import TwoWayNode
 from dataStructure.abstracts.abstractlist import AbstractList
-from dataStructure.arrays.arraylistiterator import ArrayListIterator
 
 class LinkedList(AbstractList):
     """基于linked的list实现."""
@@ -45,32 +45,20 @@ class LinkedList(AbstractList):
                 probe = probe.next
             return probe.data
         elif isinstance(i, slice):
-            start = i.start
-            stop = i.stop
-            step = i.step
-            if step == 0: raise ValueError("slice step cannot be zero")
-            if not start: start = 0
-            if not stop: stop = 0
-            if not step: step = 1
-            if start < 0: start += len(self)
-            if stop < 0: stop += len(self)
-            if start < 0: start = 0
-            if stop < 0: stop = -1
-            if stop > len(self): stop = len(self)
-            if start > len(self): start = len(self) - 1
+            slices = treatSlice(i, len(self))
+            start = slices[0]
+            stop = slices[1]
+            step = slices[2]
             probe = self._items
             newList = LinkedList()
-            if step > 0:
-                for i in range(start):
-                    probe = probe.next
-                for i in range(start, stop, step):
+            for i in range(start):
+                probe = probe.next
+            for i in range(start - stop):
+                if i % abs(step) == 0:
                     newList.append(probe.data)
+                if step > 0:
                     probe = probe.next
-            else:
-                for i in range(start):
-                    probe = probe.next
-                for i in range(start, stop, step):
-                    newList.append(probe.data)
+                else:
                     probe = probe.previous
             return newList
 
@@ -89,15 +77,26 @@ class LinkedList(AbstractList):
                 probe = probe.next
             probe.data = value
         elif isinstance(i, slice):
-            start = i.start
-            stop = i.stop
-            step = i.step
-            if not start: start = 0
-            if not stop: stop = 0
-            if not step: step = 0
-            if start < 0: start += len(self)
-            if stop < 0: stop += len(self)
+            slices = treatSlice(i, len(self))
+            start = slices[0]
+            stop = slices[1]
+            step = slices[2]
+            probe = self._items
+            for i in range(start):
+                probe = probe.next
+            j = 0
+            for i in range(start - stop):
+                if i % abs(step) == 0:
+                    probe.data = value[j]
+                    j += 1
+                if step > 0:
+                    probe = probe.next
+                else:
+                    probe = probe.previous
 
+    def append(self, item):
+        """将item添加到self的末尾."""
+        self.insert(len(self), item)
 
     def insert(self, i, item):
         """将item插入索引i的位置."""
@@ -130,20 +129,13 @@ class LinkedList(AbstractList):
             raise IndexError("list index out of range")
         theNode = self._getNode(i)
         item = theNode.data
-        if len(self) == 1:
-            self._items = None
+        if i == 0:
+            self._items = self._items.next
+        elif i == len(self) - 1:
+            theNode.previous.next = None
         else:
-            if i == 0:
-                self._items = self._items.next
-            elif i == len(self) - 1:
-                theNode.previous.next = None
-            else:
-                theNode.next.previous = theNode.previous
-                theNode.previous.next = theNode.next
+            theNode.next.previous = theNode.previous
+            theNode.previous.next = theNode.next
         self._size -= 1
         self.incModCount()
         return item
-
-    def listIterator(self):
-        """返回列表迭代器."""
-        return ArrayListIterator(self)

@@ -7,6 +7,7 @@ Author: Rock Johnson
 import datetime
 from dataStructure.arrays.arraylist import ArrayList
 from dataStructure.linkeds.linkedlist import LinkedList
+from dataStructure.arrays.arraysortedlist import ArraySortedList
 
 
 def test(listType):
@@ -48,5 +49,6 @@ if __name__ == '__main__':
     star = datetime.datetime.now()
     # test(ArrayList)
     test(LinkedList)
+    # test(ArraySortedList)
     print(datetime.datetime.now() - star)
     pass

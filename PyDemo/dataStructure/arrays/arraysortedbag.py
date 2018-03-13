@@ -17,7 +17,33 @@ class ArraySortedBag(ArrayBag):
     # 进行访问的方法
     def __contains__(self, item):
         """如果item在self里面则返回True否则返回False"""
-        return self.index(item, retype="boolean")
+        return self.index(item, retype="bool")
+
+    def index(self, item, retype="int", isadd=False):
+        """返回self里的item,如果item不在里面则返回-1
+        retype: 指定返回的类型(int, bool),默认int
+        isadd: 专门为add添加的判断属性"""
+        left = 0
+        right = len(self) - 1
+        while left <= right:
+            mid = (left + right) // 2
+            if not isadd and self._items[mid] == item:
+                if retype == "int":
+                    return mid
+                elif retype == "bool":
+                    return True
+            elif isadd and self._items[mid] <= item and self._items[mid + 1] >= item:
+                return mid + 1
+            elif self._items[mid] > item:
+                right = mid - 1
+            else:
+                left = mid + 1
+        if isadd:
+            return 0
+        elif retype == "int":
+            return -1
+        elif retype == "bool":
+            return False
 
     # 赋值的函数
     def add(self, item):
@@ -34,7 +60,6 @@ class ArraySortedBag(ArrayBag):
             self._items[targetIndex] = item
             self._size += 1
 
-
     def remove(self, item):
         """前提: item在self里面.
         Raises: KeyError如果item不在self里面.
@@ -50,29 +75,3 @@ class ArraySortedBag(ArrayBag):
         # 递减逻辑大小
         self._size -= 1
         self._items.pop()
-
-    def index(self, item, retype="int", isadd=False):
-        """返回self里的item,如果item不在里面则返回-1
-        retype: 指定返回的类型(int, boolean),默认int
-        isadd: 专门为add添加的判断属性"""
-        left = 0
-        right = len(self) - 1
-        while left <= right:
-            mid = (left + right) // 2
-            if not isadd and self._items[mid] == item:
-                if retype == "int":
-                    return mid
-                elif retype == "boolean":
-                    return True
-            elif isadd and self._items[mid] <= item and self._items[mid + 1] >= item:
-                return mid + 1
-            elif self._items[mid] > item:
-                right = mid - 1
-            else:
-                left = mid + 1
-        if isadd:
-            return 0
-        elif retype == "int":
-            return -1
-        elif retype == "boolean":
-            return False

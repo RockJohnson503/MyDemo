@@ -15,6 +15,7 @@ from dataStructure.linkeds.linkedstack import LinkedStack
 from dataStructure.linkeds.linkedqueue import LinkedQueue
 from dataStructure.linkeds.linkedlist import LinkedList
 from dataStructure.arrays.arraysortedbag import ArraySortedBag
+from dataStructure.arrays.arraysortedlist import ArraySortedList
 from dataStructure.linkeds.linkedpriorityqueue import LinkedPriorityQueue
 
 if __name__ == '__main__':
@@ -89,14 +90,16 @@ if __name__ == '__main__':
     #     li.next()
     #     li.remove()
     # print(l)
-    l = LinkedList([1, 2, 3])
-    l[2] = 1, 3
-    # print(l[110:-222:-1])
-    # l[1:3] = 1, 2, 3
+    l = ArraySortedList([1, 2, 3])
+    # l[2] = 1, 3
+    print(l[110:-222:-2])
+    l.remove(2)
     print(l)
+    # l[1:3] = 1, 2, 3
+    # print(l[1:3])
     li = [1, 2, 3]
-    print(li)
     # l[110:-222:-1] = 1, 2, 3, 4
-    li[2] = 1, 3
+    print(li[110:-222:-2])
+    li[110:-222:-2] = 1, 2
     print(li)
     pass

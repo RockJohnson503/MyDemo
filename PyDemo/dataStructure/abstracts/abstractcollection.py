@@ -20,10 +20,7 @@ class AbstractCollection(object):
         self._size = 0
         if sourceCollection:
             for item in sourceCollection:
-                if "List" not in self._type:
-                    self.add(item)
-                else:
-                    self.append(item)
+                self.add(item)
 
     # 进行访问的方法
     def isEmpty(self):
@@ -38,10 +35,7 @@ class AbstractCollection(object):
         """返回一个包含self以及other的新数据结构."""
         result = type(self)(self)
         for item in other:
-            if "List" not in self._type:
-                result.add(item)
-            else:
-                result.append(item)
+            result.add(item)
         return result
 
     def __eq__(self, other):

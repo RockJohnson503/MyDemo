@@ -5,6 +5,7 @@ File: abstractlist.py
 Author: Rock Johnson
 """
 from dataStructure.funtools.func import tostr
+from dataStructure.arrays.arraylistiterator import ArrayListIterator
 from dataStructure.abstracts.abstractcollection import AbstractCollection
 
 class AbstractList(AbstractCollection):
@@ -27,7 +28,6 @@ class AbstractList(AbstractCollection):
         """增加self修改的次数."""
         self._modCount += 1
 
-    # 赋值的函数
     def index(self, item):
         """前提: item在self里面.
         返回item的索引.
@@ -37,9 +37,10 @@ class AbstractList(AbstractCollection):
                 return position
         raise ValueError(str(item) + "Not in list.")
 
-    def append(self, item):
-        """将item添加到self的末尾."""
-        self.insert(len(self), item)
+    # 赋值的函数
+    def add(self, item):
+        """将item添加到self里面."""
+        self.append(item)
 
     def remove(self, item):
         """前提: item在self里面.
@@ -47,3 +48,7 @@ class AbstractList(AbstractCollection):
         后置: 将item从self里移除."""
         position = self.index(item)
         self.pop(position)
+
+    def listIterator(self):
+        """返回列表迭代器."""
+        return ArrayListIterator(self)

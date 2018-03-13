@@ -22,3 +22,21 @@ def tostr(item):
         return "'" + str(item) + "'"
     else:
         return str(item)
+
+def treatSlice(slices, length):
+    # 处理slice参数
+    start = slices.start
+    stop = slices.stop
+    step = slices.step
+    if step == 0: raise ValueError("slice step cannot be zero")
+    if not start: start = 0
+    if not stop: stop = 0
+    if not step: step = 1
+    if start < 0: start += length
+    if stop < 0: stop += length
+    if start < 0: start = 0
+    if stop < 0: stop = -1
+    if stop > length: stop = length
+    if start > length: start = length - 1
+
+    return start, stop, step
