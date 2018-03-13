@@ -13,15 +13,13 @@ class LinkedList(AbstractList):
 
     def __init__(self, sourceCollection=None):
         """初始状态,其中包括sourceCollection的内容(如果存在)."""
-        self._head = TwoWayNode(None)
-        self._head.previous = self._head.next = self._head.data
         AbstractList.__init__(self, sourceCollection)
 
     # 访问函数
     def __iter__(self):
         """支持将self进行迭代."""
-        cursor = self._head.next
-        while cursor != self._head:
+        cursor = self._items
+        while cursor != None:
             yield cursor.data
             cursor = cursor.next
 
@@ -29,11 +27,7 @@ class LinkedList(AbstractList):
     def _getNode(self, i):
         """Helper method: returns a pointer to the node
         at position i."""
-        if i == len(self):  # Constant-time access to head node
-            return self._head
-        if i == len(self) - 1:  # or last data node
-            return self._head.previous
-        probe = self._head.next
+        probe = self._items
         while i > 0:
             probe = probe.next
             i -= 1
@@ -46,7 +40,7 @@ class LinkedList(AbstractList):
         if isinstance(i, int):
             if i < 0: i += len(self)
             if i < 0 or i >= len(self): raise IndexError("index out of range")
-            probe = self._head.next
+            probe = self._items
             for i in range(i):
                 probe = probe.next
             return probe.data
@@ -61,10 +55,10 @@ class LinkedList(AbstractList):
             if start < 0: start += len(self)
             if stop < 0: stop += len(self)
             if start < 0: start = 0
-            if stop < 0: stop = 0
+            if stop < 0: stop = -1
             if stop > len(self): stop = len(self)
-            if start > len(self): start = len(self)
-            probe = self._head.next
+            if start > len(self): start = len(self) - 1
+            probe = self._items
             newList = LinkedList()
             if step > 0:
                 for i in range(start):
@@ -76,8 +70,8 @@ class LinkedList(AbstractList):
                 for i in range(start):
                     probe = probe.next
                 for i in range(start, stop, step):
-                    probe = probe.previous
                     newList.append(probe.data)
+                    probe = probe.previous
             return newList
 
 
@@ -90,10 +84,9 @@ class LinkedList(AbstractList):
             if i < 0: i += len(self)
             if i < 0 or i >= len(self):
                 raise IndexError("list index out of range")
-            probe = self._head
-            while i >= 0:
+            probe = self._items
+            for i in range(i):
                 probe = probe.next
-                i -= 1
             probe.data = value
         elif isinstance(i, slice):
             start = i.start
@@ -110,10 +103,20 @@ class LinkedList(AbstractList):
         """将item插入索引i的位置."""
         if i < 0: i = 0
         elif i > len(self): i = len(self)
-        theNode = self._getNode(i)
-        newNode = TwoWayNode(item, theNode.previous, theNode.next)
-        theNode.next = newNode
-        theNode.previous = newNode
+        if self.isEmpty():
+            self._items = TwoWayNode(item)
+        elif i == 0:
+            self._items = TwoWayNode(item, next=self._items)
+            self._items.next.previous = self._items
+        elif i == len(self):
+            theNode = self._getNode(i - 1)
+            newNode = TwoWayNode(item, theNode, None)
+            theNode.next = newNode
+        else:
+            theNode = self._getNode(i)
+            newNode = TwoWayNode(item, theNode.previous, theNode)
+            theNode.previous.next = newNode
+            theNode.previous = newNode
         self._size += 1
         self.incModCount()
 
@@ -124,10 +127,19 @@ class LinkedList(AbstractList):
         Raises: IndexError."""
         if i == None: i = len(self) - 1
         if i < 0 or i >= len(self):
-            raise IndexError("list index of list")
-        item = self[i]
-        for j in range(i, len(self) - 1):
-            self[j] = self[j + 1]
+            raise IndexError("list index out of range")
+        theNode = self._getNode(i)
+        item = theNode.data
+        if len(self) == 1:
+            self._items = None
+        else:
+            if i == 0:
+                self._items = self._items.next
+            elif i == len(self) - 1:
+                theNode.previous.next = None
+            else:
+                theNode.next.previous = theNode.previous
+                theNode.previous.next = theNode.next
         self._size -= 1
         self.incModCount()
         return item

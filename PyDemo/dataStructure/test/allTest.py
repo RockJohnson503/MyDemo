@@ -90,10 +90,13 @@ if __name__ == '__main__':
     #     li.remove()
     # print(l)
     l = LinkedList([1, 2, 3])
-    print(l)
-    print(l[2:1:-1])
+    l[2] = 1, 3
+    # print(l[110:-222:-1])
     # l[1:3] = 1, 2, 3
-    # print(l)
-    l = [1, 2, 3]
-    print(l[2:1:-1])
+    print(l)
+    li = [1, 2, 3]
+    print(li)
+    # l[110:-222:-1] = 1, 2, 3, 4
+    li[2] = 1, 3
+    print(li)
     pass

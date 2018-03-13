@@ -35,8 +35,7 @@ class AbstractList(AbstractCollection):
         for position, data in enumerate(self):
             if data == item:
                 return position
-        else:
-            raise ValueError(str(item) + "Not in list.")
+        raise ValueError(str(item) + "Not in list.")
 
     def append(self, item):
         """将item添加到self的末尾."""

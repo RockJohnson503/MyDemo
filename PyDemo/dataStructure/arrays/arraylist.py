@@ -50,7 +50,7 @@ class ArrayList(AbstractList):
         Raises: IndexError."""
         if i == None: i = len(self) - 1
         if i < 0 or i >= len(self):
-            raise IndexError("list index of list")
+            raise IndexError("list index out of range")
         item = self._items[i]
         for j in range(i, len(self) - 1):
             self._items[j] = self._items[j + 1]

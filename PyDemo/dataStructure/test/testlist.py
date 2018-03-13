@@ -4,6 +4,7 @@
 File: testlist.py
 Author: Rock Johnson
 """
+import datetime
 from dataStructure.arrays.arraylist import ArrayList
 from dataStructure.linkeds.linkedlist import LinkedList
 
@@ -43,8 +44,9 @@ def test(listType):
         li.remove()
     print("Length: ", len(lst))
 
-
 if __name__ == '__main__':
+    star = datetime.datetime.now()
     # test(ArrayList)
     test(LinkedList)
+    print(datetime.datetime.now() - star)
     pass
