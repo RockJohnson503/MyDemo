@@ -13,6 +13,7 @@ from dataStructure.arrays.arraylist import ArrayList
 from dataStructure.linkeds.linkedbag import LinkedBag
 from dataStructure.linkeds.linkedstack import LinkedStack
 from dataStructure.linkeds.linkedqueue import LinkedQueue
+from dataStructure.linkeds.linkedlist import LinkedList
 from dataStructure.arrays.arraysortedbag import ArraySortedBag
 from dataStructure.linkeds.linkedpriorityqueue import LinkedPriorityQueue
 
@@ -61,11 +62,38 @@ if __name__ == '__main__':
     # print(arr)
     # q = LinkedPriorityQueue([Comparable(i, random.randrange(100)) for i in range(10**4)])
     # print(q)
-    ls = [1, 2, 3, 4]
-    ls.insert(5, 0)
-    print(ls)
-    l = ArrayList([1, 2, 3])
+    # l = ArrayList(range(1, 10))
+    # print(len(l))
+    # print(l)
+    # li = l.listIterator()
+    # li.first()
+    # while li.hasNext():
+    #     print(li.next())
+    # print(l)
+    # li.last()
+    # while li.hasPrevious():
+    #     print(li.previous())
+    # print(l)
+    # li.first()
+    # for count in range(2):
+    #     print(li.next())
+    # li.insert(10)
+    # print(l)
+    # li.first()
+    # for count in range(3):
+    #     li.next()
+    # li.remove()
+    # print(l)
+    # li.first()
+    # while li.hasNext():
+    #     li.next()
+    #     li.remove()
+    # print(l)
+    l = LinkedList([1, 2, 3])
     print(l)
-    l[2] = 4
-    print(l)
+    print(l[2:1:-1])
+    # l[1:3] = 1, 2, 3
+    # print(l)
+    l = [1, 2, 3]
+    print(l[2:1:-1])
     pass

@@ -25,9 +25,9 @@ class Array(object):
         """支持for循环遍历"""
         return iter(self._items)
 
-    def __getitem__(self, item):
+    def __getitem__(self, i):
         """下标用于索引访问"""
-        return self._items[item]
+        return self._items[i]
 
     def __setitem__(self, key, value):
         """下标在索引出进行替换"""

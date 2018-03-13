@@ -19,27 +19,16 @@ class ArrayList(AbstractList):
         """前提: 0 <= i < len(self)
         返回索引i的item.
         Raises: IndexError."""
-        if i < 0 or i >=len(self):
-            raise IndexError("list index out of range")
-        cursor = 0
-        for item in self:
-            if cursor == i:
-                return item
-            cursor += 1
+        return self._items[i]
 
     # 赋值函数
     def __setitem__(self, i, value):
         """前提: 0 <= i < len(self)
         将索引i的值替换成value.
         Raises: IndexError."""
-        if i < 0 or i >=len(self):
+        if i < 0 or i >= len(self):
             raise IndexError("list index out of range")
-        cursor = 0
-        for item in self:
-            if cursor == i:
-                item = value
-                break
-            cursor += 1
+        self._items[i] = value
 
     def insert(self, i, item):
         """将item插入索引i的位置."""
