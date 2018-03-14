@@ -7,9 +7,11 @@ Author: Rock Johnson
 import random
 from dataStructure.wrapper.comparable import Comparable
 from dataStructure.arrays.arraybag import ArrayBag
+from dataStructure.arrays.arrayset import ArraySet
 from dataStructure.arrays.arraystack import ArrayStack
 from dataStructure.arrays.arrayqueue import ArrayQueue
 from dataStructure.arrays.arraylist import ArrayList
+from dataStructure.arrays.arraydict import ArrayDict
 from dataStructure.linkeds.linkedbag import LinkedBag
 from dataStructure.linkeds.linkedstack import LinkedStack
 from dataStructure.linkeds.linkedqueue import LinkedQueue
@@ -90,16 +92,22 @@ if __name__ == '__main__':
     #     li.next()
     #     li.remove()
     # print(l)
-    l = ArraySortedList([1, 2, 3])
+    # l = ArraySortedList([1, 2, 3])
     # l[2] = 1, 3
-    print(l[110:-222:-2])
-    l.remove(2)
-    print(l)
+    # print(l[110:-222:-2])
+    # l.remove(2)
+    # print(l)
     # l[1:3] = 1, 2, 3
     # print(l[1:3])
-    li = [1, 2, 3]
+    # li = [1, 2, 3]
     # l[110:-222:-1] = 1, 2, 3, 4
-    print(li[110:-222:-2])
-    li[110:-222:-2] = 1, 2
-    print(li)
+    # print(li[110:-222:-2])
+    # li[110:-222:-2] = 1, 2
+    # print(li)
+    dt = {"1":1, "2":2}
+    print(dt)
+    d = ArrayDict({'1': 1, '2': 2})
+    print(d)
+    d.pop("2")
+    print(d)
     pass
