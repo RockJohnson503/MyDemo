@@ -66,7 +66,6 @@ def quickSort(lyst):
     right = len(lyst) - 1
     while left < right:
         pivotLocation = partition(lyst, left, right)
-        right = pivotLocation - 1
 
 def quickSortHelper(lyst, left, right):
     # 快排的辅助函数
@@ -360,32 +359,43 @@ def fac(n):
         return 1
     return fac(n - 1) * n
 
+def land(a, b):
+    while a != 0:
+        a, b = b % a, a
+    return b
+
+def sumDepth(arr):
+    if len(arr) == 1:
+        return arr[0]
+    return arr[0] + sumDepth(arr[1:])
+
 if __name__ == '__main__':
-    lst = [random.randrange(100) for i in range(10**6)]
+    # print(sumDepth([2, 4, 6]))
+    # lst = [random.randrange(100) for i in range(10**6)]
     # print(lst)
     # star = datetime.datetime.now()
     # print(binsearch(lst, 5201314))
     # print(0 in lst)
-    # print(datetime.datetime.now() - star)
+    # print(datetime.dateti``````me.now() - star)
     # lst = [random.randrange(10**10) for i in range(10**5)]
     # start = datetime.datetime.now()
     # medianSlidingWindow(lst, 100)
     # print(datetime.datetime.now() - start)
     # lst1 = [i for i in range(10**4)]
     # lst2 = [i for i in range(10**4)]
-    start = datetime.datetime.now()
+    # start = datetime.datetime.now()
     # selectionSort(lst)
     # bubbleSort(lst)
     # bubbleSortWithTweak(lst)
     # insertSort(lst)
     # quickSort(lst)
     # mergeSort(lst)
-    countingSort(lst)
+    # countingSort(lst)
     # sorted(lst)
     # lst.sort()
     # intersection(lst1, lst2)
-    print(datetime.datetime.now() - start)
-    print(isSort(lst))
+    # print(datetime.datetime.now() - start)
+    # print(isSort(lst))
     # lst2 = [5, 4, 2, 1, 3]
     # mergeSort(lst2)
     # print(lst2)
@@ -397,12 +407,12 @@ if __name__ == '__main__':
     # print(datetime.datetime.now() - start)
     # p = Profiler()
     # p.test(selectionSort, size=10**4)
-    # lst = [i for i in range(10, 0, -1)]
-    # print(lst)
+    lst = [i for i in range(10, 0, -1)]
+    print(lst)
     # print(isSort(lst))
-    # countingSort(lst)
-    # print(lst)
+    quickSort(lst)
+    print(lst)
     # start = datetime.datetime.now()
-    # print(isSort(lst))
+    print(isSort(lst))
     # print(datetime.datetime.now() - start)
     pass
