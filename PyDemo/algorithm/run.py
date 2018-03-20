@@ -424,18 +424,33 @@ def runTime(fun, num):
 
     return str(timeSum / 100) + "ms"
 
+def search(arr, num):
+    return searchHelper(arr, num, 0, len(arr) - 1)
+
+def searchHelper(arr, num, left, right):
+    if left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == num:
+            return mid
+        else:
+            index1 = searchHelper(arr, num, left, mid - 1)
+            index2 = searchHelper(arr, num, mid + 1, right)
+            return index1 if index1 != -1 else index2
+    return -1
+
+
 if __name__ == '__main__':
     # print(algComp(countingSort, quickSortDepth, mergeSort, bubbleSortWithTweak, selectionSort, bubbleSort, insertSort, num=3))
     # print(sumDepth([2, 4, 6]))
-    # lst = [random.randrange(100) for i in range(10 ** 4)]
+    # lst = [i for i in range(10 ** 4)]
     # print(runTime(quickSortDepth, 4))
     # print(runTime(mySort, 4))
     # print(runTime(quickSortDepth, 4))
     # print(lst)
     # star = datetime.datetime.now()
-    # print(binsearch(lst, 5201314))
+    # print(search(lst, 10**4 - 1))
     # print(0 in lst)
-    # print(datetime.dateti``````me.now() - star)
+    # print(datetime.datetime.now() - star)
     # lst = [random.randrange(10**10) for i in range(10**5)]
     # start = datetime.datetime.now()
     # medianSlidingWindow(lst, 100)
