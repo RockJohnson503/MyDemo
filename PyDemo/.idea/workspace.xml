@@ -16,7 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/PyDemo$run.coverage" NAME="run Coverage Results" MODIFIED="1521512369880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithm" />
+    <SUITE FILE_PATH="coverage/PyDemo$run.coverage" NAME="run Coverage Results" MODIFIED="1521534294986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithm" />
     <SUITE FILE_PATH="coverage/PyDemo$Twisted_Trial_for_run_test.coverage" NAME="Twisted Trial for run.test Coverage Results" MODIFIED="1516586839717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/advProgramming/test" />
     <SUITE FILE_PATH="coverage/PyDemo$Twisted_Trial_for_testbag_test.coverage" NAME="Twisted Trial for testbag.test Coverage Results" MODIFIED="1519374305134" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataStructure/test" />
     <SUITE FILE_PATH="coverage/PyDemo$Twisted_Trial_in_teststack_py.coverage" NAME="Twisted Trial in teststack.py Coverage Results" MODIFIED="1520396565795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataStructure/test" />
@@ -62,8 +62,8 @@
       <file leaf-file-name="run.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/algorithm/run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3502">
-              <caret line="127" column="31" lean-forward="true" selection-start-line="127" selection-start-column="31" selection-end-line="127" selection-end-column="31" />
+            <state relative-caret-position="180">
+              <caret line="411" column="17" lean-forward="false" selection-start-line="411" selection-start-column="17" selection-end-line="411" selection-end-column="17" />
               <folding>
                 <element signature="e#61#72#0" expanded="true" />
               </folding>
@@ -142,10 +142,10 @@
         <option value="$PROJECT_DIR$/dataStructure/abstracts/abstractcollection.py" />
         <option value="$PROJECT_DIR$/dataStructure/abstracts/abstractdict.py" />
         <option value="$PROJECT_DIR$/dataStructure/test/allTest.py" />
-        <option value="$PROJECT_DIR$/teach/demo1/game.py" />
         <option value="$PROJECT_DIR$/teach/demo1/test.py" />
-        <option value="$PROJECT_DIR$/algorithm/run.py" />
         <option value="$PROJECT_DIR$/OAMOA/demo1/test.py" />
+        <option value="$PROJECT_DIR$/teach/demo1/game.py" />
+        <option value="$PROJECT_DIR$/algorithm/run.py" />
       </list>
     </option>
   </component>
@@ -183,17 +183,6 @@
             <path>
               <item name="PyDemo" type="b2602c69:ProjectViewProjectNode" />
               <item name="PyDemo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PyDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="OAMOA" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PyDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="OAMOA" type="462c0819:PsiDirectoryNode" />
-              <item name="demo1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PyDemo" type="b2602c69:ProjectViewProjectNode" />
@@ -249,7 +238,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test (1)">
+  <component name="RunManager" selected="Python.run">
     <configuration name="game" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -354,9 +343,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.test (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.install_python" />
-        <item index="2" class="java.lang.String" itemvalue="Python.run" />
+        <item index="0" class="java.lang.String" itemvalue="Python.run" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.install_python" />
         <item index="3" class="java.lang.String" itemvalue="Python.test" />
         <item index="4" class="java.lang.String" itemvalue="Python.game" />
       </list>
@@ -658,26 +647,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dataStructure/arrays/arraylist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dataStructure/arrays/arraylistiterator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="975">
           <caret line="65" column="30" lean-forward="true" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataStructure/arrays/arraysortedlist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -711,16 +684,6 @@
         <state relative-caret-position="165">
           <caret line="11" column="49" lean-forward="true" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataStructure/abstracts/abstractlist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="19" column="8" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="20" />
-          <folding>
-            <element signature="e#70#115#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -828,14 +791,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/teach/demo1/game.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/teach/demo1/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -876,10 +831,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dataStructure/abstracts/abstractlist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-202">
+          <caret line="19" column="8" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataStructure/arrays/arraylist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataStructure/arrays/arraysortedlist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="74" column="26" lean-forward="true" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teach/demo1/game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/algorithm/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3502">
-          <caret line="127" column="31" lean-forward="true" selection-start-line="127" selection-start-column="31" selection-end-line="127" selection-end-column="31" />
+        <state relative-caret-position="180">
+          <caret line="411" column="17" lean-forward="false" selection-start-line="411" selection-start-column="17" selection-end-line="411" selection-end-column="17" />
           <folding>
             <element signature="e#61#72#0" expanded="true" />
           </folding>

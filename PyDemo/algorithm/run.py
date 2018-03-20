@@ -267,7 +267,9 @@ def game():
             inp = int(input("请输入数字: "))
         except Exception as e:
             print("请输入数字,此次游戏不算,重新计数")
-            game()
+            count = 0
+            p = random.randrange(100)
+            continue
         if inp == p:
             print("恭喜您猜对了, 总共用了: " + str(count) + "次")
             break
@@ -369,9 +371,66 @@ def sumDepth(arr):
         return arr[0]
     return arr[0] + sumDepth(arr[1:])
 
+def mySort(lst):
+    newLst = []
+    for i in lst:
+        myAdd(newLst, i)
+    for i in range(len(lst)):
+        lst[i] = newLst[i]
+
+def myAdd(lst, item):
+    if len(lst) == 0 or item >= lst[-1]:
+        lst.append(item)
+    elif item <= lst[0]:
+        lst.insert(0, item)
+    else:
+        left = 0
+        right = len(lst) - 1
+        index = 0
+        while left <= right:
+            mid = (left + right) // 2
+            if item >= lst[mid] and item <= lst[mid + 1]:
+                index = mid + 1
+                break
+            elif item > lst[mid]:
+                left = mid + 1
+            else:
+                right = mid - 1
+        lst.insert(index, item)
+
+
+def algComp(*args, num):
+    for item in args:
+        if type(item) != type(algComp):
+            raise TypeError("error parameter, parameter must be functions")
+    dic = {}
+    for fun in args:
+        dic[fun.__name__] = float(runTime(fun, num)[:-2])
+    sortedTime = sorted(dic.values())
+    sortedFun = []
+    for i in sortedTime:
+        sortedFun += [k for k,v in dic.items() if v == i]
+    return " <- ".join(sortedFun)
+
+def runTime(fun, num):
+    timeSum = 0
+    for i in range(100):
+        lst = [random.randrange(100) for i in range(10 ** num)]
+        start = datetime.datetime.now()
+        fun(lst)
+        timeSum += (datetime.datetime.now() - start).microseconds
+        if not isSort(lst):
+            raise SyntaxError("your sort ALG is wrong!")
+
+    return str(timeSum / 100) + "ms"
+
 if __name__ == '__main__':
+    # print(algComp(countingSort, quickSortDepth, mergeSort, bubbleSortWithTweak, selectionSort, bubbleSort, insertSort, num=3))
     # print(sumDepth([2, 4, 6]))
-    # lst = [random.randrange(100) for i in range(10**6)]
+    # lst = [random.randrange(100) for i in range(10 ** 4)]
+    # print(runTime(quickSortDepth, 4))
+    # print(runTime(mySort, 4))
+    # print(runTime(quickSortDepth, 4))
     # print(lst)
     # star = datetime.datetime.now()
     # print(binsearch(lst, 5201314))
@@ -388,9 +447,10 @@ if __name__ == '__main__':
     # bubbleSort(lst)
     # bubbleSortWithTweak(lst)
     # insertSort(lst)
-    # quickSort(lst)
+    # quickSortDepth(lst)
     # mergeSort(lst)
     # countingSort(lst)
+    # mySort(lst)
     # sorted(lst)
     # lst.sort()
     # intersection(lst1, lst2)
@@ -407,12 +467,12 @@ if __name__ == '__main__':
     # print(datetime.datetime.now() - start)
     # p = Profiler()
     # p.test(selectionSort, size=10**4)
-    lst = [i for i in range(10, 0, -1)]
-    print(lst)
+    # lst = [i for i in range(10, 0, -1)]
+    # print(lst)
     # print(isSort(lst))
-    quickSort(lst)
-    print(lst)
+    # quickSort(lst)
+    # print(lst)
     # start = datetime.datetime.now()
-    print(isSort(lst))
+    # print(isSort(lst))
     # print(datetime.datetime.now() - start)
     pass

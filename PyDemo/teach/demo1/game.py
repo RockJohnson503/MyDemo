@@ -14,9 +14,8 @@ class Game:
         self.__count = 1
 
     def play(self, n):
-        print("第%s局" % self.__count)
         if n == self.__randomNum:
-            print("猜对了")
+            print("猜对了, 总共用了: %s次" % self.__count)
             return True
         elif n > self.__randomNum:
             print("比%s小" % n)
