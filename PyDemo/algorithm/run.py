@@ -448,7 +448,7 @@ if __name__ == '__main__':
     # print(runTime(quickSortDepth, 4))
     # print(lst)
     # star = datetime.datetime.now()
-    # print(search(lst, 10**4 - 1))
+    # print(search(lst, 10**2))
     # print(0 in lst)
     # print(datetime.datetime.now() - star)
     # lst = [random.randrange(10**10) for i in range(10**5)]
