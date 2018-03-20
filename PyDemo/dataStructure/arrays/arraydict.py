@@ -11,7 +11,11 @@ class ArrayDict(AbstractDict):
 
     def __init__(self, sourceCollection=None):
         """如果存在,则将item从sourceCollection复制到集合中."""
-        AbstractDict.__init__(self, sourceCollection)
+        AbstractDict.__init__(self)
+        self._items = list()
+        if sourceCollection:
+            for key, value in sourceCollection.items():
+                self[key] = value
 
     # 访问方法
     def __iter__(self):
@@ -54,9 +58,7 @@ class ArrayDict(AbstractDict):
 
     def _index(self, key):
         """搜索key的一个辅助方法."""
-        index = 0
-        for entry in self._items:
+        for index, entry in enumerate(self._items):
             if entry.key == key:
                 return index
-            index += 1
         return -1

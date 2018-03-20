@@ -13,10 +13,6 @@ class AbstractDict(AbstractCollection):
     def __init__(self, sourceCollection=None):
         """如果存在,则将item从sourceCollection复制到集合中."""
         AbstractCollection.__init__(self)
-        self._items = list()
-        if sourceCollection:
-            for key, value in sourceCollection.items():
-                self[key] = value
 
     def __str__(self):
         """返回字符串."""
@@ -35,8 +31,8 @@ class AbstractDict(AbstractCollection):
         if type(self) != type(other) or \
             len(self) != len(other):
             return False
-        for key in self:
-            if key not in other:
+        for key1, key2 in zip(self, other):
+            if key1 != key2:
                 return False
         return True
 
@@ -44,13 +40,13 @@ class AbstractDict(AbstractCollection):
         """返回字典中键的迭代器."""
         return iter(self)
 
-    def Values(self):
+    def values(self):
         """返回字典中值的迭代器."""
         return iter(map(lambda key: self[key], self))
 
     def items(self):
         """返回字典中键值对的迭代器."""
-        return iter(map(lambda key: Item(key, self[key]), self))
+        return iter(map(lambda key: "(" + tostr(key) + ", " + tostr(self[key]) + ")", self))
 
 class Item(object):
     """代表一个字典item.支持按键比较."""

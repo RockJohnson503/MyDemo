@@ -105,9 +105,12 @@ if __name__ == '__main__':
     # li[110:-222:-2] = 1, 2
     # print(li)
     dt = {"1":1, "2":2}
-    print(dt)
-    d = ArrayDict({'1': 1, '2': 2})
-    print(d)
-    d.pop("2")
-    print(d)
+    print(dt.items())
+    for i in dt.items():
+        print(i)
+    d = ArrayDict({'1': 1, '2': 2, "1": 3})
+    print(d.items())
+    for i in d.items():
+        print(i)
+    print(d["1"])
     pass

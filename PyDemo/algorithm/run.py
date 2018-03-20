@@ -9,76 +9,64 @@ import timeit
 import cProfile
 import random
 import datetime
-import numpy as np
+# import numpy as np
 from algorithm.profiler import Profiler
 from collections import defaultdict
-from dataStructure.arrays import Array
+from dataStructure.arrays.arrays import Array
 from bisect import *
 
 # 各种排序算法
-def swap(lyst, i, j):
-    # 交换函数
-    temp = lyst[i]
-    lyst[i] = lyst[j]
-    lyst[j] = temp
-
 def selectionSort(lyst):
     # 选择排序
-    i = 0
-    while i < len(lyst) - 1:
+    for i in range(len(lyst) - 1):
         minIndex = i
-        j = i + 1
-        while j < len(lyst):
+        for j in range(i + 1, len(lyst)):
             if lyst[j] < lyst[minIndex]:
                 minIndex = j
-            j += 1
         if minIndex != i:
-            swap(lyst, minIndex, i)
-        i += 1
+            lyst[minIndex], lyst[i] = lyst[i], lyst[minIndex]
 
 def bubbleSort(lyst):
     # 冒泡排序
-    n = len(lyst)
-    while n > 1:
-        i = 1
-        while i < n:
-            if lyst[i] < lyst[i - 1]:
-                swap(lyst, i, i - 1)
-            i += 1
-        n -= 1
+    for i in range(len(lyst), 0, -1):
+        for j in range(1, i):
+            if lyst[j] < lyst[j - 1]:
+                lyst[j], lyst[j - 1] = lyst[j - 1], lyst[j]
 
 def bubbleSortWithTweak(lyst):
     # 改良后的冒泡排序
-    n = len(lyst)
-    while n > 1:
-        i = 1
+    for i in range(len(lyst), 0, -1):
         swapped = False
-        while i < n:
-            if lyst[i] < lyst[i - 1]:
-                swap(lyst, i, i - 1)
+        for j in range(1, i):
+            if lyst[j] < lyst[j - 1]:
+                lyst[j], lyst[j - 1] = lyst[j - 1], lyst[j]
                 swapped = True
-            i += 1
         if not swapped: break
-        n -= 1
 
 def insertSort(lyst):
     # 插入排序
-    i = 1
-    while i < len(lyst):
+    for i in range(1, len(lyst)):
         itemToInsert = lyst[i]
-        j = i - 1
-        while j >= 0:
+        newIndex = i
+        for j in range(i - 1, -1, -1):
             if itemToInsert < lyst[j]:
                 lyst[j + 1] = lyst[j]
-                j -= 1
+                newIndex = j
             else:
                 break
-        lyst[j + 1] = itemToInsert
-        i += 1
+        lyst[newIndex] = itemToInsert
+
+def quickSortDepth(lyst):
+    # 快速排序递归版
+    quickSortHelper(lyst, 0, len(lyst) - 1)
 
 def quickSort(lyst):
-    # 快速排序
-    quickSortHelper(lyst, 0, len(lyst) - 1)
+    # 快速排序循环版
+    left = 0
+    right = len(lyst) - 1
+    while left < right:
+        pivotLocation = partition(lyst, left, right)
+        right = pivotLocation - 1
 
 def quickSortHelper(lyst, left, right):
     # 快排的辅助函数
@@ -91,18 +79,16 @@ def partition(lyst, left, right):
     # 快排实现过程
     # 找到基准点并与最后一项进行交换
     middle = (left + right) // 2
-    pivot = lyst[middle]
-    lyst[middle] = lyst[right]
-    lyst[right] = pivot
+    lyst[middle], lyst[right] = lyst[right], lyst[middle]
     # 将边界点设置为第一个位置
     boundary = left
     # 移动items到左侧
     for index in range(left, right):
-        if lyst[index] < pivot:
-            swap(lyst, index, boundary)
+        if lyst[index] < lyst[right]:
+            lyst[index], lyst[boundary] = lyst[boundary], lyst[index]
             boundary += 1
     # 交换基准点和边界
-    swap(lyst, right, boundary)
+    lyst[right], lyst[boundary] = lyst[boundary], lyst[right]
     return boundary
 
 def mergeSort(lyst):
@@ -150,15 +136,23 @@ def wiggleSort(lyst):
         lyst.insert(i, lyst.pop())
         i += 2
 
-def countingSort(A, key=lambda x: x):
+def countingSort(A):
     # 计数排序
-    B, C = [], defaultdict(list)
+    if isSort(A):
+        return
+    C = defaultdict(list)
     for x in A:
-        C[key(x)].append(x)
+        C[x].append(x)
+    A.clear()
     for k in range(min(C), max(C) + 1):
         if k in C:
-            B.extend(C[k])
-    return B
+            A.extend(C[k])
+
+def isSort(lyst):
+    for i in range(len(lyst) - 1):
+        if lyst[i] > lyst[i + 1]:
+            return False
+    return True
 
 # 算法习题
 def rotateString(strs, offset):
@@ -174,13 +168,11 @@ def solve(vlist,wlist,totalWeight,totalLength):
         for j in range(totalWeight, 0, -1):
             if wlist[i] <= j:
                 resArr[j] = max(resArr[j], resArr[j-wlist[i]]+vlist[i])
-    print(resArr)
     return resArr[-1]
 
 def maxSum(triangle):
-    res = 0
     if triangle is None or len(triangle) == 0:
-        return res
+        return 0
     tmp = triangle[-1]
     for i in range(len(triangle) - 1, -1, -1):
         if i + 1 < len(triangle):
@@ -363,8 +355,13 @@ def is_prime(n):
             return False
     return True
 
+def fac(n):
+    if n == 1:
+        return 1
+    return fac(n - 1) * n
+
 if __name__ == '__main__':
-    # lst = [random.randrange(100) for i in range(10**5)]
+    lst = [random.randrange(100) for i in range(10**6)]
     # print(lst)
     # star = datetime.datetime.now()
     # print(binsearch(lst, 5201314))
@@ -376,18 +373,19 @@ if __name__ == '__main__':
     # print(datetime.datetime.now() - start)
     # lst1 = [i for i in range(10**4)]
     # lst2 = [i for i in range(10**4)]
-    # start = datetime.datetime.now()
+    start = datetime.datetime.now()
     # selectionSort(lst)
     # bubbleSort(lst)
     # bubbleSortWithTweak(lst)
     # insertSort(lst)
     # quickSort(lst)
     # mergeSort(lst)
-    # countingSort(lst)
+    countingSort(lst)
     # sorted(lst)
     # lst.sort()
     # intersection(lst1, lst2)
-    # print(datetime.datetime.now() - start)
+    print(datetime.datetime.now() - start)
+    print(isSort(lst))
     # lst2 = [5, 4, 2, 1, 3]
     # mergeSort(lst2)
     # print(lst2)
@@ -397,6 +395,14 @@ if __name__ == '__main__':
     # lst.index(10**5-1)
     # print(kthPrime(10**5))
     # print(datetime.datetime.now() - start)
-    p = Profiler()
-    p.test(quickSort, size=10**5)
+    # p = Profiler()
+    # p.test(selectionSort, size=10**4)
+    # lst = [i for i in range(10, 0, -1)]
+    # print(lst)
+    # print(isSort(lst))
+    # countingSort(lst)
+    # print(lst)
+    # start = datetime.datetime.now()
+    # print(isSort(lst))
+    # print(datetime.datetime.now() - start)
     pass
