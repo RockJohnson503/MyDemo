@@ -438,8 +438,25 @@ def searchHelper(arr, num, left, right):
             return index1 if index1 != -1 else index2
     return -1
 
+def findMoney(owed):
+    denom = {10000: 10, 5000: 10, 2000: 10, 1000: 10, 500: 10, 200: 10, 100: 10, 50: 10, 25: 10, 10: 10, 1: 10}
+    payed = {}
+    for d in denom.keys():
+        while owed >= d:
+            if denom[d] == 0:
+                break
+            owed -= d
+            denom[d] -= 1
+            if payed.get(d) == None:
+                payed[d] = 0
+            payed[d] += 1
+    if owed == 0:
+        return payed
+    else:
+        return "零钱不够了!"
 
 if __name__ == '__main__':
+    print(findMoney(15216))
     # print(algComp(countingSort, quickSortDepth, mergeSort, bubbleSortWithTweak, selectionSort, bubbleSort, insertSort, num=3))
     # print(sumDepth([2, 4, 6]))
     # lst = [i for i in range(10 ** 4)]
