@@ -13,6 +13,7 @@ import datetime
 from algorithm.profiler import Profiler
 from collections import defaultdict
 from dataStructure.arrays.arrays import Array
+from algorithm.searchFunc import Search
 from bisect import *
 
 # 各种排序算法
@@ -258,6 +259,7 @@ def comsearch(nums, target):
             return True
     return False
 
+
 def game():
     p = random.randrange(100)
     count = 0
@@ -424,20 +426,6 @@ def runTime(fun, num):
 
     return str(timeSum / 100) + "ms"
 
-def search(arr, num):
-    return searchHelper(arr, num, 0, len(arr) - 1)
-
-def searchHelper(arr, num, left, right):
-    if left <= right:
-        mid = (left + right) // 2
-        if arr[mid] == num:
-            return mid
-        else:
-            index1 = searchHelper(arr, num, left, mid - 1)
-            index2 = searchHelper(arr, num, mid + 1, right)
-            return index1 if index1 != -1 else index2
-    return -1
-
 def findMoney(owed):
     denom = {10000: 10, 5000: 10, 2000: 10, 1000: 10, 500: 10, 200: 10, 100: 10, 50: 10, 25: 10, 10: 10, 1: 10}
     payed = {}
@@ -456,7 +444,7 @@ def findMoney(owed):
         return "零钱不够了!"
 
 if __name__ == '__main__':
-    print(findMoney(15216))
+    # print(findMoney(15216))
     # print(algComp(countingSort, quickSortDepth, mergeSort, bubbleSortWithTweak, selectionSort, bubbleSort, insertSort, num=3))
     # print(sumDepth([2, 4, 6]))
     # lst = [i for i in range(10 ** 4)]
@@ -465,8 +453,9 @@ if __name__ == '__main__':
     # print(runTime(quickSortDepth, 4))
     # print(lst)
     # star = datetime.datetime.now()
-    # print(search(lst, 10**2))
-    # print(0 in lst)
+    # search = Search()
+    # print(search.searchDepth(lst, 10**5 - 1))
+    # print(comsearch(lst, 10**5 - 1))
     # print(datetime.datetime.now() - star)
     # lst = [random.randrange(10**10) for i in range(10**5)]
     # start = datetime.datetime.now()
