@@ -496,4 +496,5 @@ if __name__ == '__main__':
     # start = datetime.datetime.now()
     # print(isSort(lst))
     # print(datetime.datetime.now() - start)
+    print("test")
     pass
