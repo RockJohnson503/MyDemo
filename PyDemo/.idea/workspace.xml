@@ -62,8 +62,8 @@
       <file leaf-file-name="run.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/algorithm/run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="452" column="39" lean-forward="true" selection-start-line="452" selection-start-column="39" selection-end-line="452" selection-end-column="39" />
+            <state relative-caret-position="331">
+              <caret line="359" column="0" lean-forward="false" selection-start-line="359" selection-start-column="0" selection-end-line="359" selection-end-column="0" />
               <folding>
                 <element signature="e#61#72#0" expanded="true" />
               </folding>
@@ -455,13 +455,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dataStructure/demo/queue/marketmodel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6">
-          <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dataStructure/linkeds/linkedqueue.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
@@ -744,14 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.3/system/python_stubs/-37299556/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="3074" column="0" lean-forward="false" selection-start-line="3074" selection-start-column="0" selection-end-line="3074" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/advProgramming/test/run.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-765">
@@ -800,10 +785,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///opt/interpreter/pypy/lib-python/3/bisect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="66" column="4" lean-forward="false" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2017.3/system/python_stubs/-37299556/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1492">
+          <caret line="874" column="8" lean-forward="false" selection-start-line="874" selection-start-column="8" selection-end-line="874" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/algorithm/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="452" column="39" lean-forward="true" selection-start-line="452" selection-start-column="39" selection-end-line="452" selection-end-column="39" />
+        <state relative-caret-position="331">
+          <caret line="359" column="0" lean-forward="false" selection-start-line="359" selection-start-column="0" selection-end-line="359" selection-end-column="0" />
           <folding>
             <element signature="e#61#72#0" expanded="true" />
           </folding>
