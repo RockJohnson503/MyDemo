@@ -104,13 +104,15 @@ if __name__ == '__main__':
     # print(li[110:-222:-2])
     # li[110:-222:-2] = 1, 2
     # print(li)
-    dt = {"1":1, "2":2}
-    print(dt.items())
-    for i in dt.items():
-        print(i)
-    d = ArrayDict({'1': 1, '2': 2, "1": 3})
-    print(d.items())
-    for i in d.items():
-        print(i)
-    print(d["1"])
+    # dt = {"1":1, "2":2}
+    # print(dt.items())
+    # for i in dt.items():
+    #     print(i)
+    # d = ArrayDict({'1': 1, '2': 2, "1": 3})
+    # print(d.items())
+    # for i in d.items():
+    #     print(i)
+    # print(d["1"])
+    lst = LinkedList([1, 2, 3, 4, 2])
+    print(lst.index(2, True))
     pass

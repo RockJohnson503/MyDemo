@@ -28,14 +28,21 @@ class AbstractList(AbstractCollection):
         """增加self修改的次数."""
         self._modCount += 1
 
-    def index(self, item):
+    def index(self, item, all=False):
         """前提: item在self里面.
         返回item的索引.
         异常: 如果item不在self里面则抛出KeyError异常."""
+        if all:
+            res = []
         for position, data in enumerate(self):
             if data == item:
-                return position
-        raise ValueError(str(item) + "Not in list.")
+                if all:
+                    res.append(position)
+                else:
+                    return position
+        if all and res != []:
+            return tuple(res)
+        raise ValueError(str(item) + " Not in list.")
 
     # 赋值的函数
     def add(self, item):
