@@ -28,9 +28,8 @@ class LinkedList(AbstractList):
         """Helper method: returns a pointer to the node
         at position i."""
         probe = self._items
-        while i > 0:
+        for j in range(i):
             probe = probe.next
-            i -= 1
         return probe
 
     def __getitem__(self, i):

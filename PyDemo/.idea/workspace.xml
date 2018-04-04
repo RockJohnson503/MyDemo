@@ -17,7 +17,9 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/PyDemo$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1521526134627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OAMOA/demo1" />
-    <SUITE FILE_PATH="coverage/PyDemo$allTest.coverage" NAME="allTest Coverage Results" MODIFIED="1522735978480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataStructure/test" />
+    <SUITE FILE_PATH="coverage/PyDemo$lintPractice.coverage" NAME="lintPractice Coverage Results" MODIFIED="1522828091908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithm" />
+    <SUITE FILE_PATH="coverage/PyDemo$allTest.coverage" NAME="allTest Coverage Results" MODIFIED="1522814305662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataStructure/test" />
+    <SUITE FILE_PATH="coverage/PyDemo$sorts.coverage" NAME="sorts Coverage Results" MODIFIED="1522834183220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithm" />
     <SUITE FILE_PATH="coverage/PyDemo$run__1_.coverage" NAME="run (1) Coverage Results" MODIFIED="1516758665104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithm" />
     <SUITE FILE_PATH="coverage/PyDemo$testlist.coverage" NAME="testlist Coverage Results" MODIFIED="1521006667850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataStructure/test" />
     <SUITE FILE_PATH="coverage/PyDemo$Twisted_Trial_in_teststack_py.coverage" NAME="Twisted Trial in teststack.py Coverage Results" MODIFIED="1520396565795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataStructure/test" />
@@ -39,7 +41,7 @@
     <SUITE FILE_PATH="coverage/PyDemo$teststack.coverage" NAME="teststack Coverage Results" MODIFIED="1520821951423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataStructure/test" />
     <SUITE FILE_PATH="coverage/PyDemo$namedtuple_test.coverage" NAME="namedtuple_test Coverage Results" MODIFIED="1516332114790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CollectionsOverView/chapter3" />
     <SUITE FILE_PATH="coverage/PyDemo$game.coverage" NAME="game Coverage Results" MODIFIED="1521430226874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/teach/demo1" />
-    <SUITE FILE_PATH="coverage/PyDemo$run.coverage" NAME="run Coverage Results" MODIFIED="1522118070605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithm" />
+    <SUITE FILE_PATH="coverage/PyDemo$run.coverage" NAME="run Coverage Results" MODIFIED="1522830475528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithm" />
     <SUITE FILE_PATH="coverage/PyDemo$arraylistiterator.coverage" NAME="arraylistiterator Coverage Results" MODIFIED="1520820649998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataStructure/arrays" />
     <SUITE FILE_PATH="coverage/PyDemo$testnode.coverage" NAME="testnode Coverage Results" MODIFIED="1519294980959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataStructure/test" />
     <SUITE FILE_PATH="coverage/PyDemo$Twisted_Trial_for_testbag_test.coverage" NAME="Twisted Trial for testbag.test Coverage Results" MODIFIED="1519374305134" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataStructure/test" />
@@ -66,20 +68,32 @@
       <file leaf-file-name="demo.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/algorithm/demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="1740">
               <caret line="147" column="0" lean-forward="false" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="run.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/algorithm/run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4665">
-              <caret line="40" column="29" lean-forward="true" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+            <state relative-caret-position="225">
+              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding>
                 <element signature="e#61#72#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sorts.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/algorithm/sorts.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="258" column="35" lean-forward="true" selection-start-line="258" selection-start-column="35" selection-end-line="258" selection-end-column="35" />
+              <folding>
+                <element signature="e#63#74#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -98,6 +112,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>_head</find>
+      <find>lyst</find>
     </findStrings>
     <replaceStrings>
       <replace>_items</replace>
@@ -109,8 +124,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/dataStructure/arrays.py" />
-        <option value="$PROJECT_DIR$/dataStructure/arraybag.py" />
         <option value="$PROJECT_DIR$/dataStructure/linkedbag.py" />
         <option value="$PROJECT_DIR$/algorithm/demo.py" />
         <option value="$PROJECT_DIR$/dataStructure/test/teststack.py" />
@@ -144,7 +157,6 @@
         <option value="$PROJECT_DIR$/dataStructure/arrays/arraylist.py" />
         <option value="$PROJECT_DIR$/dataStructure/test/testlist.py" />
         <option value="$PROJECT_DIR$/dataStructure/arrays/arraysortedlist.py" />
-        <option value="$PROJECT_DIR$/dataStructure/linkeds/linkedlist.py" />
         <option value="$PROJECT_DIR$/dataStructure/test/testtree.py" />
         <option value="$PROJECT_DIR$/dataStructure/linkeds/linkedbst.py" />
         <option value="$PROJECT_DIR$/dataStructure/abstracts/abstractset.py" />
@@ -157,9 +169,12 @@
         <option value="$PROJECT_DIR$/teach/demo1/game.py" />
         <option value="$PROJECT_DIR$/algorithm/searchFunc.py" />
         <option value="$USER_HOME$/.PyCharm2017.3/system/python_stubs/-37299556/builtins.py" />
-        <option value="$PROJECT_DIR$/algorithm/run.py" />
         <option value="$PROJECT_DIR$/dataStructure/abstracts/abstractlist.py" />
         <option value="$PROJECT_DIR$/dataStructure/test/allTest.py" />
+        <option value="$PROJECT_DIR$/algorithm/lintPractice.py" />
+        <option value="$PROJECT_DIR$/dataStructure/linkeds/linkedlist.py" />
+        <option value="$PROJECT_DIR$/algorithm/run.py" />
+        <option value="$PROJECT_DIR$/algorithm/sorts.py" />
       </list>
     </option>
   </component>
@@ -200,7 +215,7 @@
             <path>
               <item name="PyDemo" type="b2602c69:ProjectViewProjectNode" />
               <item name="PyDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="dataStructure" type="462c0819:PsiDirectoryNode" />
+              <item name="algorithm" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -211,7 +226,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -246,7 +261,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.allTest">
+  <component name="RunManager" selected="Python.sorts">
     <configuration name="allTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -266,20 +281,20 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="install_python" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="lintPractice" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/OAMOA/demo1" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/algorithm" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PyDemo" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/OAMOA/demo1/install_python.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algorithm/lintPractice.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -304,6 +319,25 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="sorts" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/algorithm" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PyDemo" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algorithm/sorts.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -323,39 +357,20 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/teach/demo1" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PyDemo" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/teach/demo1/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.run" />
-      <item index="1" class="java.lang.String" itemvalue="Python.test" />
-      <item index="2" class="java.lang.String" itemvalue="Python.install_python" />
-      <item index="3" class="java.lang.String" itemvalue="Python.test (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.allTest" />
+      <item index="1" class="java.lang.String" itemvalue="Python.test (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.allTest" />
+      <item index="3" class="java.lang.String" itemvalue="Python.lintPractice" />
+      <item index="4" class="java.lang.String" itemvalue="Python.sorts" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.allTest" />
+        <item index="0" class="java.lang.String" itemvalue="Python.sorts" />
         <item index="1" class="java.lang.String" itemvalue="Python.run" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Python.install_python" />
-        <item index="4" class="java.lang.String" itemvalue="Python.test" />
+        <item index="2" class="java.lang.String" itemvalue="Python.lintPractice" />
+        <item index="3" class="java.lang.String" itemvalue="Python.allTest" />
+        <item index="4" class="java.lang.String" itemvalue="Python.test (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -415,15 +430,15 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998326" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998326" sideWeight="0.50292826" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2479062" sideWeight="0.48535872" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2479062" sideWeight="0.5146413" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2479062" sideWeight="0.48535872" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.49707174" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32663316" sideWeight="0.49707174" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998326" sideWeight="0.4897511" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15739386" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998326" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907587" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="35" y="57" width="1331" height="711" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33835846" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -473,58 +488,15 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="97" />
+      <option name="time" value="106" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dataStructure/linkeds/linkedqueue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="37" column="8" lean-forward="true" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataStructure/abstracts/abstractqueue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="19" column="54" lean-forward="true" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataStructure/linkeds/linkedpriorityqueue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="35" column="38" lean-forward="true" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataStructure/arrays/arraystack.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-141">
-          <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataStructure/test/testnode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dataStructure/test/teststack.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataStructure/arrays/arrays.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -597,6 +569,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="45" />
+          <folding>
+            <element signature="e#69#114#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -628,14 +603,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithm/profiler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/MyProgram/pypy/lib-python/3/random.py" />
     <entry file="file://$PROJECT_DIR$/teach/demo1/test.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -648,6 +615,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="47">
           <caret line="823" column="38" lean-forward="true" selection-start-line="823" selection-start-column="38" selection-end-line="823" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -672,22 +640,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithm/demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="147" column="0" lean-forward="false" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithm/searchFunc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -763,16 +715,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dataStructure/linkeds/linkedlist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1534">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#68#118#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dataStructure/arrays/arraylist.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -793,14 +735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="61" column="20" lean-forward="true" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.3/system/python_stubs/-37299556/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="4561" column="8" lean-forward="false" selection-start-line="4561" selection-start-column="8" selection-end-line="4561" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -837,12 +771,104 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dataStructure/arrays/arrays.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataStructure/linkeds/linkedbag.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="42" column="21" lean-forward="true" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataStructure/linkeds/linkedlist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="28" column="25" lean-forward="true" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+          <folding>
+            <element signature="e#68#118#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2017.3/system/python_stubs/-37299556/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1492">
+          <caret line="3112" column="8" lean-forward="false" selection-start-line="3112" selection-start-column="8" selection-end-line="3112" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///opt/interpreter/pypy/lib_pypy/_collections.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="393" column="8" lean-forward="false" selection-start-line="393" selection-start-column="8" selection-end-line="393" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithm/searchFunc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithm/lintPractice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="65" column="31" lean-forward="true" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithm/profiler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1065">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithm/demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1740">
+          <caret line="147" column="0" lean-forward="false" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/algorithm/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4665">
-          <caret line="40" column="29" lean-forward="true" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+        <state relative-caret-position="225">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding>
             <element signature="e#61#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2017.3/system/python_stubs/-37299556/math.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="229" column="22" lean-forward="true" selection-start-line="229" selection-start-column="22" selection-end-line="230" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithm/sorts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="258" column="35" lean-forward="true" selection-start-line="258" selection-start-column="35" selection-end-line="258" selection-end-column="35" />
+          <folding>
+            <element signature="e#63#74#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -11,148 +11,8 @@ import random
 import datetime
 # import numpy as np
 from algorithm.profiler import Profiler
-from collections import defaultdict
-from dataStructure.arrays.arrays import Array
 from algorithm.searchFunc import Search
 from bisect import *
-
-# 各种排序算法
-def selectionSort(lyst):
-    # 选择排序
-    for i in range(len(lyst) - 1):
-        minIndex = i
-        for j in range(i + 1, len(lyst)):
-            if lyst[j] < lyst[minIndex]:
-                minIndex = j
-        if minIndex != i:
-            lyst[minIndex], lyst[i] = lyst[i], lyst[minIndex]
-
-def bubbleSort(lyst):
-    # 冒泡排序
-    for i in range(len(lyst), 0, -1):
-        for j in range(1, i):
-            if lyst[j] < lyst[j - 1]:
-                lyst[j], lyst[j - 1] = lyst[j - 1], lyst[j]
-
-def bubbleSortWithTweak(lyst):
-    # 改良后的冒泡排序
-    for i in range(len(lyst), 0, -1):
-        swapped = False
-        for j in range(1, i):
-            if lyst[j] < lyst[j - 1]:
-                lyst[j], lyst[j - 1] = lyst[j - 1], lyst[j]
-                swapped = True
-        if not swapped: break
-
-def insertSort(lyst):
-    # 插入排序
-    for i in range(1, len(lyst)):
-        itemToInsert = lyst[i]
-        newIndex = i
-        for j in range(i - 1, -1, -1):
-            if itemToInsert < lyst[j]:
-                lyst[j + 1] = lyst[j]
-                newIndex = j
-            else:
-                break
-        lyst[newIndex] = itemToInsert
-
-def quickSortDepth(lyst):
-    # 快速排序递归版
-    quickSortHelper(lyst, 0, len(lyst) - 1)
-
-def quickSort(lyst):
-    # 快速排序循环版
-    left = 0
-    right = len(lyst) - 1
-    while left < right:
-        pivotLocation = partition(lyst, left, right)
-
-def quickSortHelper(lyst, left, right):
-    # 快排的辅助函数
-    if left < right:
-        pivotLocation = partition(lyst, left, right)
-        quickSortHelper(lyst, left, pivotLocation - 1)
-        quickSortHelper(lyst, pivotLocation + 1, right)
-
-def partition(lyst, left, right):
-    # 快排实现过程
-    # 找到基准点并与最后一项进行交换
-    middle = (left + right) // 2
-    lyst[middle], lyst[right] = lyst[right], lyst[middle]
-    # 将边界点设置为第一个位置
-    boundary = left
-    # 移动items到左侧
-    for index in range(left, right):
-        if lyst[index] < lyst[right]:
-            lyst[index], lyst[boundary] = lyst[boundary], lyst[index]
-            boundary += 1
-    # 交换基准点和边界
-    lyst[right], lyst[boundary] = lyst[boundary], lyst[right]
-    return boundary
-
-def mergeSort(lyst):
-    # 合并排序
-    copyBuffer = Array(len(lyst))
-    mergeSortHelper(lyst, copyBuffer, 0, len(lyst) - 1)
-
-def mergeSortHelper(lyst, copyBuffer, low, high):
-    # 合并排序的辅助函数
-    if low < high:
-        middle = (low + high) // 2
-        mergeSortHelper(lyst, copyBuffer, low, middle)
-        mergeSortHelper(lyst, copyBuffer, middle + 1, high)
-        merge(lyst, copyBuffer, low, middle, high)
-
-def merge(lyst, copyBuffer, low, middle, high):
-    # 合并排序的实现过程
-
-    # 初始化i1,i2到每个子列表的第一项
-    i1 = low
-    i2 = middle + 1
-
-    # 将子列表中的项初始化为copyBuffer,以保持顺序
-    for i in range(low, high + 1):
-        if i1 > middle:
-            copyBuffer[i] = lyst[i2]
-            i2 += 1
-        elif i2 > high:
-            copyBuffer[i] = lyst[i1]
-            i1 += 1
-        elif lyst[i1] < lyst[i2]:
-            copyBuffer[i] = lyst[i1]
-            i1 += 1
-        else:
-            copyBuffer[i] = lyst[i2]
-            i2 += 1
-    for i in range(low, high + 1):
-        lyst[i] = copyBuffer[i]
-
-def wiggleSort(lyst):
-    # 摆动排序
-    lyst.sort()
-    i = 1
-    while i <= len(lyst):
-        lyst.insert(i, lyst.pop())
-        i += 2
-
-def countingSort(A):
-    # 计数排序
-    if isSort(A):
-        return
-    C = defaultdict(list)
-    for x in A:
-        C[x].append(x)
-    A.clear()
-    for k in range(min(C), max(C) + 1):
-        if k in C:
-            A.extend(C[k])
-
-def isSort(lyst):
-    for i in range(len(lyst) - 1):
-        if lyst[i] > lyst[i + 1]:
-            return False
-    return True
 
 # 算法习题
 def rotateString(strs, offset):
@@ -179,6 +39,13 @@ def maxSum(triangle):
             for j in range(len(triangle[i])):
                 tmp[j] = max(tmp[j], tmp[j + 1]) + triangle[i][j]
     return tmp[0]
+
+def wiggle_sort(lyst):
+    lyst.sort()
+    i = 1
+    while i <= len(lyst):
+        lyst.insert(i, lyst.pop())
+        i += 2
 
 def searchMatrix(matrix, target):
     left = 0
@@ -373,58 +240,6 @@ def sumDepth(arr):
         return arr[0]
     return arr[0] + sumDepth(arr[1:])
 
-def mySort(lst):
-    newLst = []
-    for i in lst:
-        myAdd(newLst, i)
-    for i in range(len(lst)):
-        lst[i] = newLst[i]
-
-def myAdd(lst, item):
-    if len(lst) == 0 or item >= lst[-1]:
-        lst.append(item)
-    elif item <= lst[0]:
-        lst.insert(0, item)
-    else:
-        left = 0
-        right = len(lst) - 1
-        index = 0
-        while left <= right:
-            mid = (left + right) // 2
-            if item >= lst[mid] and item <= lst[mid + 1]:
-                index = mid + 1
-                break
-            elif item > lst[mid]:
-                left = mid + 1
-            else:
-                right = mid - 1
-        lst.insert(index, item)
-
-
-def algComp(*args, num):
-    for item in args:
-        if type(item) != type(algComp):
-            raise TypeError("error parameter, parameter must be functions")
-    dic = {}
-    for fun in args:
-        dic[fun.__name__] = float(runTime(fun, num)[:-2])
-    sortedTime = sorted(dic.values())
-    sortedFun = []
-    for i in sortedTime:
-        sortedFun += [k for k,v in dic.items() if v == i]
-    return " <- ".join(sortedFun)
-
-def runTime(fun, num):
-    timeSum = 0
-    for i in range(100):
-        lst = [random.randrange(100) for i in range(10 ** num)]
-        start = datetime.datetime.now()
-        fun(lst)
-        timeSum += (datetime.datetime.now() - start).microseconds
-        if not isSort(lst):
-            raise SyntaxError("your sort ALG is wrong!")
-
-    return str(timeSum / 100) + "ms"
 
 def findMoney(owed):
     denom = {10000: 10, 5000: 10, 2000: 10, 1000: 10, 500: 10, 200: 10, 100: 10, 50: 10, 25: 10, 10: 10, 1: 10}
@@ -442,6 +257,7 @@ def findMoney(owed):
         return payed
     else:
         return "零钱不够了!"
+
 
 if __name__ == '__main__':
     # print(findMoney(15216))
