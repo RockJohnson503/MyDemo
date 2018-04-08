@@ -18,29 +18,30 @@ def is_sort(lst):
             return False
     return True
 
-def algComp(*args, num):
+def algComp(*args, num=3, size=100):
     for item in args:
         if type(item) != type(algComp):
             raise TypeError("error parameter, parameter must be functions")
     dic = {}
     for fun in args:
-        dic[fun.__name__] = float(runTime(fun, num)[:-2])
+        dic[fun.__name__] = float(runTime(fun, num, size)[:-2])
     sortedTime = sorted(dic.values())
     sortedFun = []
     for i in sortedTime:
         sortedFun += [k for k,v in dic.items() if v == i]
     return " <- ".join(sortedFun)
 
-def runTime(fun, num):
+def runTime(fun, num=3, size=100):
     timeSum = 0
-    for i in range(100):
+    for i in range(size):
         lst = [random.randrange(100) for i in range(10 ** num)]
         start = datetime.datetime.now()
-        fun(lst)
+        res = fun(lst)
         timeSum += (datetime.datetime.now() - start).microseconds
-        if not is_sort(lst):
+        flag = is_sort(res) if res != None else is_sort(lst)
+        if not flag:
             raise SyntaxError("your sort ALG is wrong!")
-    return str(timeSum / 100) + "ms"
+    return str(timeSum / size) + "ms"
 
 
 # ----------------算法区-------------------
@@ -117,8 +118,9 @@ def insert_sort(lst):
         lst[newIndex] = itemToInsert
 
 
-# 快速排序递归版
-def quick_sort(lst):
+# 快速排序
+# 递归版 1.0
+def quick_sort_1(lst):
     quick_sort_helper(lst, 0, len(lst) - 1)
 
 def quick_sort_helper(lst, left, right):
@@ -143,6 +145,18 @@ def partition(lst, left, right):
     # 交换基准点和边界
     lst[right], lst[boundary] = lst[boundary], lst[right]
     return boundary
+
+
+# 精简递归版 2.0
+def quick_sort_2(lst):
+    if len(lst) <= 1:
+        return lst
+    pivot = lst[0]
+    return quick_sort_2([x for x in lst[1:] if x < pivot]) + [pivot] + quick_sort_2([x for x in lst[1:] if x >= pivot])
+
+
+# 一行语法糖版
+quick_sort_3 = lambda lst : ( (len(lst) <= 1 and [lst]) or [ quick_sort_3( [x for x in lst[1:] if x < lst[0]] ) + [lst[0]] + quick_sort_3( [x for x in lst[1:] if x >= lst[0]] ) ] )[0]
 
 
 # 合并排序
@@ -180,7 +194,6 @@ def merge(lst, copyBuffer, low, middle, high):
     for i in range(low, high + 1):
         lst[i] = copyBuffer[i]
 
-
 # 计数排序
 def counting_sort(lst):
     if is_sort(lst):
@@ -196,26 +209,21 @@ def counting_sort(lst):
 
 # 希尔排序
 def shell_sort(lst):
-    count = len(lst)
-    step = 2
-    group = int(count / step)
-    while group > 0:
-        for i in range(0, group):
-            j = i + group
-            while j < count:
-                k = j - group
-                key = lst[j]
-                while k >= 0:
-                    if lst[k] > key:
-                        lst[k + group] = lst[k]
-                        lst[k] = key
-                    k -= group
-                j += group
-        group = int(group / step)
+    n = len(lst)
+    gap = n // 2
+    while gap > 0:
+        for i in range(gap, n):
+            temp = lst[i]
+            j = i
+            while j >= gap and lst[j - gap] > temp:
+                lst[j] = lst[j - gap]
+                j -= gap
+            lst[j] = temp
+        gap //= 2
 
 
-# 堆排序
-def heap_sort(lst):
+# 堆排序 1.0
+def heap_sort_1(lst):
     size = len(lst)
     build_heap(lst, size)
     for i in range(0, size)[::-1]:
@@ -240,9 +248,37 @@ def build_heap(lst, size):
         adjust_heap(lst, i, size)
 
 
+# 堆排序 2.0
+def heap_sort_2(lst):
+    # 创建最大堆
+    for start in range((len(lst) - 2) // 2, -1, -1):
+        sift_down(lst, start, len(lst) - 1)
+
+    # 堆排序
+    for end in range(len(lst) - 1, 0, -1):
+        lst[0], lst[end] = lst[end], lst[0]
+        sift_down(lst, 0, end - 1)
+
+
+# 最大堆调整
+def sift_down(lst, start, end):
+    root = start
+    while True:
+        child = 2 * root + 1
+        if child > end:
+            break
+        if child + 1 <= end and lst[child] < lst[child + 1]:
+            child += 1
+        if lst[root] < lst[child]:
+            lst[root], lst[child] = lst[child], lst[root]
+            root = child
+        else:
+            break
+
+
 # 基数排序(桶子法)
 def radix_sort(lst, radix=100):
-    k = int(math.ceil(math.log(max(lst), radix)))
+    k = math.ceil(math.log(max(lst), radix))
     bucket = [[] for i in range(radix)]
     for i in range(1, k + 1):
         for j in lst:
@@ -251,10 +287,12 @@ def radix_sort(lst, radix=100):
         for z in bucket:
             lst += z
             del z[:]
-    return lst
 
 if __name__ == '__main__':
-    # print(algComp(quick_sort, merge_sort, heap_sort, radix_sort, counting_sort, num=4))
+    # print(algComp(quick_sort_1, merge_sort, heap_sort_2, radix_sort, counting_sort, shell_sort, num=4))
     # print(runTime(radix_sort, 4))
     # print(runTime(counting_sort, 4))
+    lst = [12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+    radix_sort(lst)
+    print(lst)
     pass
