@@ -19,7 +19,7 @@
     <SUITE FILE_PATH="coverage/PyDemo$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1521526134627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OAMOA/demo1" />
     <SUITE FILE_PATH="coverage/PyDemo$lintPractice.coverage" NAME="lintPractice Coverage Results" MODIFIED="1522828091908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithm" />
     <SUITE FILE_PATH="coverage/PyDemo$allTest.coverage" NAME="allTest Coverage Results" MODIFIED="1522814305662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataStructure/test" />
-    <SUITE FILE_PATH="coverage/PyDemo$sorts.coverage" NAME="sorts Coverage Results" MODIFIED="1523159284253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithm" />
+    <SUITE FILE_PATH="coverage/PyDemo$sorts.coverage" NAME="sorts Coverage Results" MODIFIED="1523165721975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithm" />
     <SUITE FILE_PATH="coverage/PyDemo$run__1_.coverage" NAME="run (1) Coverage Results" MODIFIED="1516758665104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithm" />
     <SUITE FILE_PATH="coverage/PyDemo$testlist.coverage" NAME="testlist Coverage Results" MODIFIED="1521006667850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataStructure/test" />
     <SUITE FILE_PATH="coverage/PyDemo$Twisted_Trial_in_teststack_py.coverage" NAME="Twisted Trial in teststack.py Coverage Results" MODIFIED="1520396565795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataStructure/test" />
@@ -90,8 +90,8 @@
       <file leaf-file-name="sorts.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/algorithm/sorts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="293" column="39" lean-forward="true" selection-start-line="293" selection-start-column="39" selection-end-line="293" selection-end-column="39" />
+            <state relative-caret-position="211">
+              <caret line="288" column="0" lean-forward="true" selection-start-line="288" selection-start-column="0" selection-end-line="288" selection-end-column="0" />
               <folding>
                 <element signature="e#63#74#0" expanded="true" />
               </folding>
@@ -870,8 +870,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/algorithm/sorts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="293" column="39" lean-forward="true" selection-start-line="293" selection-start-column="39" selection-end-line="293" selection-end-column="39" />
+        <state relative-caret-position="211">
+          <caret line="288" column="0" lean-forward="true" selection-start-line="288" selection-start-column="0" selection-end-line="288" selection-end-column="0" />
           <folding>
             <element signature="e#63#74#0" expanded="true" />
           </folding>
