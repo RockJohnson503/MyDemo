@@ -18,20 +18,20 @@ def is_sort(lst):
             return False
     return True
 
-def algComp(*args, num=3, size=100):
+def compare(*args, num=3, size=100):
     for item in args:
-        if type(item) != type(algComp):
+        if type(item) != type(compare):
             raise TypeError("error parameter, parameter must be functions")
     dic = {}
     for fun in args:
-        dic[fun.__name__] = float(runTime(fun, num, size)[:-2])
+        dic[fun.__name__] = float(run_time(fun, num, size)[:-2])
     sortedTime = sorted(dic.values())
     sortedFun = []
     for i in sortedTime:
         sortedFun += [k for k,v in dic.items() if v == i]
     return " <- ".join(sortedFun)
 
-def runTime(fun, num=3, size=100):
+def run_time(fun, num=3, size=100):
     timeSum = 0
     for i in range(size):
         lst = [random.randrange(100) for i in range(10 ** num)]
@@ -289,10 +289,7 @@ def radix_sort(lst, radix=100):
             del z[:]
 
 if __name__ == '__main__':
-    # print(algComp(quick_sort_1, merge_sort, heap_sort_2, radix_sort, counting_sort, shell_sort, num=4))
-    # print(runTime(radix_sort, 4))
-    # print(runTime(counting_sort, 4))
-    lst = [12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
-    radix_sort(lst)
-    print(lst)
+    print(compare(quick_sort_1, merge_sort, heap_sort_2, radix_sort, counting_sort, shell_sort, num=1))
+    # print(run_time(radix_sort, 4))
+    # print(run_time(counting_sort, 4))
     pass
