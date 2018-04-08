@@ -289,7 +289,7 @@ def radix_sort(lst, radix=100):
             del z[:]
 
 if __name__ == '__main__':
-    print(compare(quick_sort_1, merge_sort, heap_sort_2, radix_sort, counting_sort, shell_sort, num=1))
+    print(compare(quick_sort_1, merge_sort, heap_sort_2, radix_sort, counting_sort, shell_sort, num=4))
     # print(run_time(radix_sort, 4))
     # print(run_time(counting_sort, 4))
     pass
