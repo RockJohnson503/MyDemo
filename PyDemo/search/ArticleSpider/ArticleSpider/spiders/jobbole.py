@@ -58,7 +58,7 @@ class JobboleSpider(scrapy.Spider):
         #提取下一页并交给scrapy进行下载
         next_url = response.css(".next.page-numbers::attr(href)").extract_first("")
         if next_url:
-            yield Request(url=parse.urljoin(response.url, post_url), callback=self.parse)
+            yield Request(url=parse.urljoin(response.url, next_url), callback=self.parse)
 
     def parse_detail(self, response):
         article_item = JobBoleArticleItem()
