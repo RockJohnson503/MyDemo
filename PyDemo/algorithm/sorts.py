@@ -18,18 +18,18 @@ def is_sort(lst):
             return False
     return True
 
-def compare(*args, num=3, size=100):
+def compare(*args, num=3, size=100, time=False):
     for item in args:
         if type(item) != type(compare):
             raise TypeError("error parameter, parameter must be functions")
     dic = {}
     for fun in args:
-        dic[fun.__name__] = float(run_time(fun, num, size)[:-2])
-    sortedTime = sorted(dic.values())
+        dic[fun.__name__] = run_time(fun, num, size)
+    sortedTime = sorted(dic.values(), key=lambda x: float(x[:-2]))
     sortedFun = []
-    for i in sortedTime:
-        sortedFun += [k for k,v in dic.items() if v == i]
-    return " <- ".join(sortedFun)
+    for i, item in enumerate(sortedTime):
+        sortedFun += ["Num " + str(i + 1) + ", " + (k if not time else k + ", spend time: " + v) for k, v in dic.items() if v == item]
+    return "\n".join(sortedFun)
 
 def run_time(fun, num=3, size=100):
     timeSum = 0
@@ -289,7 +289,7 @@ def radix_sort(lst, radix=100):
 
 
 if __name__ == '__main__':
-    # print(compare(quick_sort_1, merge_sort, heap_sort_2, radix_sort, counting_sort, shell_sort, num=4))
+    # print(compare(quick_sort_1, merge_sort, heap_sort_2, radix_sort, counting_sort, shell_sort, num=4, time=True))
     # print(run_time(radix_sort, 4))
     # print(run_time(counting_sort, 4))
     pass
