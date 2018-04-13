@@ -46,14 +46,14 @@ def run_time(fun, num=3, size=100):
 
 # ----------------算法区-------------------
 # 乱写的排序
-def mySort(lst):
+def my_sort(lst):
     newLst = []
     for i in lst:
-        myAdd(newLst, i)
+        my_add(newLst, i)
     for i in range(len(lst)):
         lst[i] = newLst[i]
 
-def myAdd(lst, item):
+def my_add(lst, item):
     if len(lst) == 0 or item >= lst[-1]:
         lst.append(item)
     elif item <= lst[0]:
