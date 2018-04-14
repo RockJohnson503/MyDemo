@@ -18,30 +18,30 @@ def is_sort(lst):
             return False
     return True
 
-def compare(*args, num=3, size=100, time=False):
+def compare(*args, size=3, num=100, time=False):
     for item in args:
         if type(item) != type(compare):
             raise TypeError("error parameter, parameter must be functions")
     dic = {}
     for fun in args:
-        dic[fun.__name__] = run_time(fun, num, size)
+        dic[fun.__name__] = run_time(fun, size, num)
     sortedTime = sorted(dic.values(), key=lambda x: float(x[:-2]))
     sortedFun = []
     for i, item in enumerate(sortedTime):
         sortedFun += ["Num " + str(i + 1) + ", " + (k if not time else k + ", spend time: " + v) for k, v in dic.items() if v == item]
     return "\n".join(sortedFun)
 
-def run_time(fun, num=3, size=100):
+def run_time(fun, size=3, num=100):
     timeSum = 0
-    for i in range(size):
-        lst = [random.randrange(100) for i in range(10 ** num)]
+    for i in range(num):
+        lst = [random.randrange(100) for i in range(10 ** size)]
         start = datetime.datetime.now()
         res = fun(lst)
         timeSum += (datetime.datetime.now() - start).microseconds
         flag = is_sort(res) if res != None else is_sort(lst)
         if not flag:
             raise SyntaxError("your sort ALG is wrong!")
-    return str(timeSum / size) + "ms"
+    return str(timeSum / num) + "ms"
 
 
 # ----------------算法区-------------------
@@ -289,7 +289,7 @@ def radix_sort(lst, radix=100):
 
 
 if __name__ == '__main__':
-    # print(compare(quick_sort_1, merge_sort, heap_sort_2, radix_sort, counting_sort, shell_sort, num=4, time=True))
+    # print(compare(quick_sort_1, merge_sort, heap_sort_2, radix_sort, counting_sort, shell_sort, bubble_sort_tweak, bubble_sort, selection_sort, insert_sort, size=2, time=True))
     # print(run_time(radix_sort, 4))
     # print(run_time(counting_sort, 4))
     pass
