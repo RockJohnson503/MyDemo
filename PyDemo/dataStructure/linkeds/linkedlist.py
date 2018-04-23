@@ -23,10 +23,8 @@ class LinkedList(AbstractList):
             yield cursor.data
             cursor = cursor.next
 
-    # Helper method returns node at position i
     def _getNode(self, i):
-        """Helper method: returns a pointer to the node
-        at position i."""
+        """辅助函数, 返回i位置上的节点."""
         probe = self._items
         for j in range(i):
             probe = probe.next

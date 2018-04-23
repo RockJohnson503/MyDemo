@@ -29,6 +29,26 @@ class ArraySortedList(AbstractList):
             raise IndexError("list index out of range")
         self._items[i] = value
 
+    def __add__(self, other):
+        """返回一个包含self以及other的新数据结构."""
+        result = ArraySortedList()
+        i1, i2 = 0, 0
+        while i1 < len(self) or i2 < len(other):
+            if i1 == len(self):
+                result.add(other[i2])
+                i2 += 1
+            elif i2 == len(other):
+                result.add(self[i1])
+                i1 += 1
+            elif self[i1] < other[i2]:
+                result.add(self[i1])
+                i1 += 1
+            else:
+                result.add(other[i2])
+                i2 += 1
+
+        return result
+
     def __contains__(self, item):
         """如果item在self里面则返回True否则返回False"""
         self.index(item, "bool")
@@ -63,7 +83,6 @@ class ArraySortedList(AbstractList):
     def add(self, item):
         """将item添加到self里面."""
         self._items.add()
-        targetIndex = 0
         if self.isEmpty() or item >= self._items[len(self) - 1]:
             targetIndex = len(self)
         else:

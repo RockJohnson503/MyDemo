@@ -15,6 +15,26 @@ class ArraySortedBag(ArrayBag):
         ArrayBag.__init__(self, sourceCollection)
 
     # 进行访问的方法
+    def __add__(self, other):
+        """返回一个包含self以及other的新数据结构."""
+        result = ArraySortedBag()
+        i1, i2 = 0, 0
+        while i1 < len(self) or i2 < len(other):
+            if i1 == len(self):
+                result.add(other._items[i2])
+                i2 += 1
+            elif i2 == len(other):
+                result.add(self._items[i1])
+                i1 += 1
+            elif self._items[i1] < other._items[i2]:
+                result.add(self._items[i1])
+                i1 += 1
+            else:
+                result.add(other._items[i2])
+                i2 += 1
+
+        return result
+
     def __contains__(self, item):
         """如果item在self里面则返回True否则返回False"""
         return self.index(item, retype="bool")
@@ -50,15 +70,15 @@ class ArraySortedBag(ArrayBag):
         """将item添加进self."""
         # 如果item是最后一个或者self是空的
         # 则直接调用ArrayBag的add方法
+        self._items.add()
         if self.isEmpty() or item >= self._items[len(self) - 1]:
-            ArrayBag.add(self, item)
+            targetIndex = len(self)
         else:
-            self._items.add()
             targetIndex = self.index(item, isadd=True)
             for i in range(len(self._items) - 1, targetIndex, -1):
                 self._items[i] = self._items[i - 1]
-            self._items[targetIndex] = item
-            self._size += 1
+        self._items[targetIndex] = item
+        self._size += 1
 
     def remove(self, item):
         """前提: item在self里面.

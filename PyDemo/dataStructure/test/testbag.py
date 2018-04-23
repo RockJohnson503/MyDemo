@@ -12,7 +12,7 @@ from dataStructure.arrays.arraysortedbag import ArraySortedBag
 
 def test(bagType):
     """期望bag类型的对象作为参数并对该类型的对象运行一些测试."""
-    lyst = [random.randrange(10**3) for i in range(10**5)]
+    lyst = [random.randrange(10**3) for i in range(10**4)]
     # lyst = [2013, 61, 1973]
     print("The list of items added is: ", lyst)
     b1 = bagType(lyst)
@@ -41,8 +41,8 @@ def test(bagType):
 
 if __name__ == '__main__':
     star = datetime.now()
-    test(ArrayBag)
+    # test(ArrayBag)
     # test(LinkedBag)
-    # test(ArraySortedBag)
+    test(ArraySortedBag)
     print(datetime.now() - star)
     pass

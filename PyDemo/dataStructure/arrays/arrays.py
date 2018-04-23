@@ -5,7 +5,7 @@ File: arrays.py
 Author: Rock Johnson
 """
 class Array(object):
-    """Represents an array."""
+    """表示数组."""
 
     def __init__(self, capacity, fillValue = None):
         """Capacity是一个静态大小的数组.
