@@ -4,21 +4,32 @@
 File: sorts.py
 Author: Rock Johnson
 """
-import math
-import random
-import datetime
+import math, random, datetime
 from collections import defaultdict
-from dataStructure.arrays.arrays import Array
-
 
 # ----------------测试区-------------------
 def is_sort(lst):
+    # 辅助方法, 检测lst里面的元素是否有序.
     for i in range(len(lst) - 1):
         if lst[i] > lst[i + 1]:
             return False
     return True
 
 def compare(*args, size=3, num=100, time=False):
+    """
+    从运行时间上对比各个排序算法的性能.
+    :param args: 各个排序的算法.
+    :param size: 测试元素的个数(10^size), 默认3次方.
+    :param num: 测试的次数, 默认100次.
+    :param time: 测试后的结果是否显示算法的运行时间, 默认False.
+    :return: 返回测试的结果, 根据性能排行.
+
+    Example:
+    from algorithm.sorts import *
+
+    res = compare(sort_func1, [sort_func2]..., size=<size>, num=<num>, time=(True or False))
+    print(res)
+    """
     for item in args:
         if type(item) != type(compare):
             raise TypeError("error parameter, parameter must be functions")
@@ -28,10 +39,23 @@ def compare(*args, size=3, num=100, time=False):
     sortedTime = sorted(dic.values(), key=lambda x: float(x[:-2]))
     sortedFun = []
     for i, item in enumerate(sortedTime):
-        sortedFun += ["Num " + str(i + 1) + ", " + (k if not time else k + ", spend time: " + v) for k, v in dic.items() if v == item]
+        sortedFun += ["Rank: " + str(i + 1) + ",\tName: " + (k if not time else k + "," + "\tSpend_time: " + v) for k, v in dic.items() if v == item]
     return "\n".join(sortedFun)
 
 def run_time(fun, size=3, num=100):
+    """
+    测试单个排序算法的方法.
+    :param fun: 排序算法.
+    :param size: 测试元素的个数(10^size), 默认3次方.
+    :param num: 测试的次数, 默认100次.
+    :return: 返回该排序算法的使用时间.
+
+    Example:
+    from algorithm.sorts import *
+
+    res = run_time(sort_func, size=<size>, num=<num>)
+    print(res)
+    """
     timeSum = 0
     for i in range(num):
         lst = [random.randrange(100) for i in range(10 ** size)]
@@ -161,18 +185,18 @@ quick_sort_3 = lambda lst : ( (len(lst) <= 1 and [lst]) or [ quick_sort_3( [x fo
 
 # 合并排序
 def merge_sort(lst):
-    copyBuffer = Array(len(lst))
-    merge_sort_helper(lst, copyBuffer, 0, len(lst) - 1)
+    copy_buffer = [None for i in range(len(lst))]
+    merge_sort_helper(lst, copy_buffer, 0, len(lst) - 1)
 
-def merge_sort_helper(lst, copyBuffer, low, high):
+def merge_sort_helper(lst, copy_buffer, low, high):
     # 合并排序的辅助函数
     if low < high:
         middle = (low + high) // 2
-        merge_sort_helper(lst, copyBuffer, low, middle)
-        merge_sort_helper(lst, copyBuffer, middle + 1, high)
-        merge(lst, copyBuffer, low, middle, high)
+        merge_sort_helper(lst, copy_buffer, low, middle)
+        merge_sort_helper(lst, copy_buffer, middle + 1, high)
+        merge(lst, copy_buffer, low, middle, high)
 
-def merge(lst, copyBuffer, low, middle, high):
+def merge(lst, copy_buffer, low, middle, high):
     # 合并排序的实现过程
     # 初始化i1,i2到每个子列表的第一项
     i1 = low
@@ -180,24 +204,22 @@ def merge(lst, copyBuffer, low, middle, high):
     # 将子列表中的项初始化为copyBuffer,以保持顺序
     for i in range(low, high + 1):
         if i1 > middle:
-            copyBuffer[i] = lst[i2]
+            copy_buffer[i] = lst[i2]
             i2 += 1
         elif i2 > high:
-            copyBuffer[i] = lst[i1]
+            copy_buffer[i] = lst[i1]
             i1 += 1
         elif lst[i1] < lst[i2]:
-            copyBuffer[i] = lst[i1]
+            copy_buffer[i] = lst[i1]
             i1 += 1
         else:
-            copyBuffer[i] = lst[i2]
+            copy_buffer[i] = lst[i2]
             i2 += 1
     for i in range(low, high + 1):
-        lst[i] = copyBuffer[i]
+        lst[i] = copy_buffer[i]
 
 # 计数排序
 def counting_sort(lst):
-    if is_sort(lst):
-        return
     dt = defaultdict(list)
     for i in lst:
         dt[i].append(i)
@@ -289,7 +311,23 @@ def radix_sort(lst, radix=100):
 
 
 if __name__ == '__main__':
-    # print(compare(quick_sort_1, merge_sort, heap_sort_2, radix_sort, counting_sort, shell_sort, bubble_sort_tweak, bubble_sort, selection_sort, insert_sort, size=2, time=True))
-    # print(run_time(radix_sort, 4))
+    # print(compare(quick_sort_1,
+    #               merge_sort,
+    #               heap_sort_2,
+    #               radix_sort,
+    #               counting_sort,
+    #               shell_sort,
+    #               bubble_sort_tweak,
+    #               bubble_sort,
+    #               selection_sort,
+    #               insert_sort,
+    #               size=4,
+    #               time=True))
+    # print(run_time(merge_sort, 4))
     # print(run_time(counting_sort, 4))
+    # lst = [532, 3, 14, 12, 53, 64, 135]
+    # merge_sort(lst)
+    lst = ["fas", "asfa", "asfa", "1", "3"]
+    quick_sort_1(lst)
+    print(lst)
     pass

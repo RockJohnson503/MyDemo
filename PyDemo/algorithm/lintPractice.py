@@ -75,6 +75,33 @@ def mergeSortedArray2(A, B):
     return new_lst
 
 
+# 中位数
+def median(nums):
+    mid = len(nums) // 2 if len(nums) % 2 != 0 else len(nums) // 2 - 1
+    return median_helper(nums, 0, mid, len(nums) - 1)
+
+def median_helper(nums, low, mid, height):
+    if low <= height:
+        pivot = partition2(nums, low, height)
+        if pivot == mid:
+            return nums[mid]
+        elif pivot < mid:
+            return median_helper(nums, pivot + 1, mid, height)
+        else:
+            return median_helper(nums, low, mid, pivot - 1)
+
+def partition2(nums, low, height):
+    mid = (low + height) // 2
+    nums[mid], nums[height] = nums[height], nums[mid]
+    boundary = low
+    for index in range(low, height):
+        if nums[index] < nums[height]:
+            nums[index], nums[boundary] = nums[boundary], nums[index]
+            boundary += 1
+    nums[height], nums[boundary] = nums[boundary], nums[height]
+    return boundary
+
+
 if __name__ == '__main__':
-    print(mergeSortedArray2([2,4,5,6, 8], [1,2,3,4, 7]))
+    print(median([4]))
     pass
