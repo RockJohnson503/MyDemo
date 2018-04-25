@@ -81,10 +81,23 @@ def pop(linked):
     probe = probe.next
     return removedNode
 
+def removeElements(head, val):
+    if head == None:
+        return None
+
+    new = Node(0)
+    new.next = head
+    head = new
+
+    while head.next != None:
+        if head.next.data == val:
+            head.next = head.next.next
+        else:
+            head = head.next
+
+    return new.next
+
 if __name__ == '__main__':
-    toStr(head)
-    print("===================")
-    add(head, 10)
-    print("===================")
-    toStr(head)
+    node = Node(1, Node(2, Node(3, Node(3, Node(4, Node(5, Node(3)))))))
+    toStr(removeElements(node, 3))
     pass

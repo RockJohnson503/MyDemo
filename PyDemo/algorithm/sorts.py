@@ -39,7 +39,9 @@ def compare(*args, size=3, num=100, time=False):
     sortedTime = sorted(dic.values(), key=lambda x: float(x[:-2]))
     sortedFun = []
     for i, item in enumerate(sortedTime):
-        sortedFun += ["Rank: " + str(i + 1) + ",\tName: " + (k if not time else k + "," + "\tSpend_time: " + v) for k, v in dic.items() if v == item]
+        sortedFun += ["Rank: " + str(i + 1) + "," \
+                      "\tName: " + (k if not time else k + ","
+                      "\tSpend_time: " + v) for k, v in dic.items() if v == item]
     return "\n".join(sortedFun)
 
 def run_time(fun, size=3, num=100):
@@ -201,6 +203,7 @@ def merge(lst, copy_buffer, low, middle, high):
     # 初始化i1,i2到每个子列表的第一项
     i1 = low
     i2 = middle + 1
+    is_change = False
     # 将子列表中的项初始化为copyBuffer,以保持顺序
     for i in range(low, high + 1):
         if i1 > middle:
@@ -215,8 +218,11 @@ def merge(lst, copy_buffer, low, middle, high):
         else:
             copy_buffer[i] = lst[i2]
             i2 += 1
-    for i in range(low, high + 1):
-        lst[i] = copy_buffer[i]
+            is_change = True
+
+    if is_change:
+        for i in range(low, high + 1):
+            lst[i] = copy_buffer[i]
 
 # 计数排序
 def counting_sort(lst):
@@ -325,9 +331,4 @@ if __name__ == '__main__':
     #               time=True))
     # print(run_time(merge_sort, 4))
     # print(run_time(counting_sort, 4))
-    # lst = [532, 3, 14, 12, 53, 64, 135]
-    # merge_sort(lst)
-    lst = ["fas", "asfa", "asfa", "1", "3"]
-    quick_sort_1(lst)
-    print(lst)
     pass

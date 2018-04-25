@@ -6,5 +6,6 @@ Author: Rock Johnson
 """
 from collections import defaultdict
 
-dt = defaultdict()
-dt[1] = 0
+dt = defaultdict(int)
+dt[1] += 1
+print(dt)
