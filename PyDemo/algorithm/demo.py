@@ -90,7 +90,6 @@ def naive_topSort(G, S=None):
 
 def topSort(G):
     count = dict((u, 0) for u in G)
-    print(count)
     for u in G:
         for v in G[u]:
             count[v] += 1
@@ -146,7 +145,23 @@ def rec_dag_sp(W, s, t):                            # 从s到t的最短路径
         return min(W[u][v] + d(v) for v in W[u])    # 每个第一步都是最好的
     return d(s)                                     # 将d()应用到实际的起始节点
 
+def dag_sp(W, s, t):
+    d = {u:float('inf') for u in W}
+    d[s] = 0
+    for u in topSort(W):
+        if u == t: break
+        for v in W[u]:
+            d[v] = min(d[v], d[u] + W[u][v])
+    return d[t]
+
+@memo
+def C(n, k):
+    if n == 0 or k == 0 or n == k:
+        return 1
+    return C(n - 1, k - 1) + C(n - 1, k)
+
 if __name__ == '__main__':
+    print(dag_sp({"a": {"b": 2, "f": 9}, "b": {"d": 2, "c": 1, "f": 6}, "c": {"d": 7}, "d": {"e": 2, "f": 3}, "e": {"f": 4}, "f": {}}, "b", "c"))
     # M = [2, 2, 10, 5, 3, 5, 7, 4]
     # print(countingSort(M))
     #
@@ -169,6 +184,6 @@ if __name__ == '__main__':
     # print(C(6, 1))
     #
     # print(rec_dag_sp(['a', 'b', 'c', 'd'], 'a', 'd'))
-    for i in combinations([1, 2, 3, 2], 3):
-        print(i)
+    # for i in combinations([1, 2, 3, 2], 3):
+    #     print(i)
     pass
