@@ -5,7 +5,6 @@ File: lintPractice.py
 Author: Rock Johnson
 """
 
-
 # 第K大的数
 def kthLargestElement(k, A):
     return quik_sort_helper(A, 0, len(A) - 1, k)
@@ -230,17 +229,65 @@ def kthSmallest( matrix, k):
 
 # 动态规划 数字三角形
 def minimumTotal(triangle):
-    res = 0
     if triangle is None or len(triangle) == 0:
-        return res
+        return 0
     tmp = triangle[-1]
-    for i in range(len(triangle) - 1, -1, -1):
-        if i + 1 < len(triangle):
-            for j in range(len(triangle[i])):
-                tmp[j] = min(tmp[j], tmp[j + 1]) + triangle[i][j]
+    for i in range(len(triangle) - 2, -1, -1):
+        for j in range(len(triangle[i])):
+            tmp[j] = min(tmp[j], tmp[j + 1]) + triangle[i][j]
     return tmp[0]
 
 
+
+def uniquePaths(m, n):
+    if m == 0 or n == 0:
+        return 0
+    if m == 1 or n == 1:
+        return 1
+
+    dp = [[(1 if j == 0 or i == 0 else None) for i in range(m)] for j in range(n)]
+    for i in range(1, n):
+        for j in range(1, m):
+            dp[i][j] = dp[i][j - 1] + dp[i - 1][j]
+    return dp[-1][-1]
+
+def find_one(self, matrix):
+    for i in matrix:
+        for j in i:
+            if j == 1:
+                return True
+    return False
+
+def uniquePathsWithObstacles(obstacleGrid):
+    if obstacleGrid is None or len(obstacleGrid) == 0:
+        return 0
+    elif len(obstacleGrid) == 1 or len(obstacleGrid[0]) == 1:
+        if find_one(obstacleGrid):
+            return 0
+        return 1
+
+    dp = [[None for i in range(len(obstacleGrid[0]))] for j in
+          range(len(obstacleGrid))]
+    for i in range(len(dp)):
+        if obstacleGrid[i][0] == 1:
+            break
+        dp[i][0] = 1
+    for i in range(len(dp[0])):
+        if obstacleGrid[0][i] == 1:
+            break
+        dp[0][i] = 1
+    for i in range(1, len(obstacleGrid)):
+        for j in range(1, len(obstacleGrid[i])):
+            if obstacleGrid[i][j] != 1:
+                if dp[i][j - 1] == None:
+                    dp[i][j] = dp[i - 1][j]
+                elif dp[i - 1][j] == None:
+                    dp[i][j] = dp[i][j - 1]
+                else:
+                    dp[i][j] = dp[i][j - 1] + dp[i - 1][j]
+    return dp[-1][-1] if dp[-1][-1] != None else 0
+
+
 if __name__ == '__main__':
-    print(minimumTotal([[2], [3,4], [6,5,7], [4,1,8,3]]))
+    print(uniquePathsWithObstacles([[0,0],[0,0],[0,0],[1,0],[0,0]]))
     pass
