@@ -4,6 +4,7 @@
 File: lintPractice.py
 Author: Rock Johnson
 """
+from itertools import combinations
 
 # 第K大的数
 def kthLargestElement(k, A):
@@ -288,6 +289,17 @@ def uniquePathsWithObstacles(obstacleGrid):
     return dp[-1][-1] if dp[-1][-1] != None else 0
 
 
+# 背包问题 1.0
+def backPack(m, A):
+    res = []
+    for i in range(len(A), 0, -1):
+        for s in combinations(A, i):
+            if sum(s) <= m:
+                res.append(sum(s))
+        if res != []:
+            return max(res)
+
+
 if __name__ == '__main__':
-    print(uniquePathsWithObstacles([[0,0],[0,0],[0,0],[1,0],[0,0]]))
+    print(backPack(12, [2, 3, 5, 7]))
     pass
