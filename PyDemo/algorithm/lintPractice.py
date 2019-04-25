@@ -300,6 +300,37 @@ def backPack(m, A):
             return max(res)
 
 
+# 滑动窗口的最大值
+def maxSlidingWindow(nums, k):
+    # write your code here
+    res = []
+    for i in range(len(nums) - k + 1):
+        left = i
+        right = left + k - 1
+        new_nums = nums.copy()
+        res.append(quick_sort_helper(new_nums, left, right))
+    return res
+
+def quick_sort_helper(lst, left, right):
+    if left <= right:
+        pivot = Spartition(lst, left, right)
+        if pivot == right:
+            return lst[pivot]
+        else:
+            return quick_sort_helper(lst, pivot + 1, right)
+
+def Spartition(lst, left, right):
+    mid = (left + right) // 2
+    lst[mid], lst[right] = lst[right], lst[mid]
+    boundary = left
+    for index in range(left, right):
+        if lst[index] < lst[right]:
+            lst[index], lst[boundary] = lst[boundary], lst[index]
+            boundary += 1
+    lst[right], lst[boundary] = lst[boundary], lst[right]
+    return boundary
+
+
 if __name__ == '__main__':
-    print(backPack(12, [2, 3, 5, 7]))
+    print(maxSlidingWindow([1,2,7,7,8], 3))
     pass

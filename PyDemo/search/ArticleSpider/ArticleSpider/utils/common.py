@@ -23,4 +23,4 @@ def extract_num(text):
     return nums
 
 if __name__ == "__main__":
-    print (get_md5("http://jobbole.com".encode("utf-8")))
+    print(get_md5("http://jobbole.com".encode("utf-8")))
