@@ -9,3 +9,6 @@
 class TutorialPipeline(object):
     def process_item(self, item, spider):
         return item
+
+    def open_spider(self, spider):
+        print(spider)
