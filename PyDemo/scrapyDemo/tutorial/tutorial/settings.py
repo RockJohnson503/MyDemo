@@ -23,7 +23,8 @@ ROBOTSTXT_OBEY = False
 
 # LOG_ENABLED = False
 # LOG_LEVEL = 'INFO'
-TELNETCONSOLE_PASSWORD = 'k836867547'
+# TELNETCONSOLE_PASSWORD = 'k836867547'
+
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
