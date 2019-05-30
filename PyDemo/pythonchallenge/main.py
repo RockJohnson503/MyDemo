@@ -177,6 +177,28 @@ def challenge_10():
         a = res
         print(len(res))
 
+def challenge_11():
+    cave = cv2.imread('cave.jpg')
+    new_img_odd = np.zeros((480, 640, 3), np.uint8)
+    new_img_even = np.zeros((480, 640, 3), np.uint8)
+    for x in range(640):
+        for y in range(480):
+            if (x + y) % 2 == 1:
+                new_img_odd[y, x] = cave[y, x]
+            else:
+                new_img_even[y, x] = cave[y, x]
+
+    cv2.imshow('odd', new_img_odd)
+    cv2.imshow('even', new_img_even)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+
+def challenge_12():
+    with open('evil2.gfx', 'rb') as evil:
+        data = evil.read()
+        for i in range(5):
+            with open('img_%d.jpg' % i, 'wb') as im:
+                im.write(data[i::5])
 
 if __name__ == '__main__':
     # s = "g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj"
@@ -185,6 +207,4 @@ if __name__ == '__main__':
     # t = l.maketrans(l, l[2:] + l[:2])
     # print(s.translate(t))
 
-    # challenge_2()
-
-    challenge_10()
+    challenge_12()
