@@ -5,9 +5,9 @@ File: main.py
 Author: Rock Johnson
 """
 from collections import defaultdict
-import re, string, _pickle as cPickle, zipfile, bz2
-# import requests
-import cv2, numpy as np
+import re, string, pickle as cPickle, zipfile, bz2
+import cv2, requests, numpy as np
+from xmlrpc.server import SimpleXMLRPCServer
 
 def challenge_1(s):
     chars = string.ascii_lowercase
@@ -200,6 +200,10 @@ def challenge_12():
             with open('img_%d.jpg' % i, 'wb') as im:
                 im.write(data[i::5])
 
+def challenge_13():
+    server = SimpleXMLRPCServer(('http://www.pythonchallenge.com/pc/phonebook.php', 8000))
+    print(server)
+
 if __name__ == '__main__':
     # s = "g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj"
     # print(challenge_1('map'))
@@ -207,4 +211,4 @@ if __name__ == '__main__':
     # t = l.maketrans(l, l[2:] + l[:2])
     # print(s.translate(t))
 
-    challenge_12()
+    challenge_13()

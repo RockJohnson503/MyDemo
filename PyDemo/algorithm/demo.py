@@ -160,8 +160,47 @@ def C(n, k):
         return 1
     return C(n - 1, k - 1) + C(n - 1, k)
 
+# 欧几里得算法-分配最大正方形土地
+def devil_land(width, height):
+    if width % height == 0 or height % width == 0:
+        return height if height < width else width
+    longest = divmod(width, height)[1] if width > height else divmod(height, width)[1]
+    return devil_land(longest if width > height else (width - longest), (height - longest) if width > height else longest)
+
+def sum_recursive(lst):
+    if len(lst) == 1:
+        return lst[0]
+    elif len(lst) > 1:
+        return lst[0] + sum_recursive(lst[1:])
+
+def count_recursive(lst):
+    if lst == []:
+        return 0
+    return 1 + count_recursive(lst[1:])
+
+def max_recursive(lst):
+    if len(lst) > 1:
+        max_num = max_recursive(lst[1:])
+        return lst[0] if lst[0] > max_num else max_num
+    elif len(lst) == 1:
+        return lst[0]
+
+def binary_recursive(lst, item, low=None, hight=None):
+    low = low if low else 0
+    hight = hight if hight else len(lst) - 1
+    if low >= hight:
+        return None
+    mid = (low + hight) // 2
+    if lst[mid] == item:
+        return mid
+    elif lst[mid] > item:
+        return binary_recursive(lst, item, low, mid - 1)
+    else:
+        return binary_recursive(lst, item, mid + 1, hight)
+
 if __name__ == '__main__':
-    print(fib(39))
+    print(binary_recursive([i for i in range(100)], 50))
+    # print(fib(39))
     # print(dag_sp({"a": {"b": 2, "f": 9}, "b": {"d": 2, "c": 1, "f": 6}, "c": {"d": 7}, "d": {"e": 2, "f": 3}, "e": {"f": 4}, "f": {}}, "b", "c"))
     # M = [2, 2, 10, 5, 3, 5, 7, 4]
     # print(countingSort(M))
