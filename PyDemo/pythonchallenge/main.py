@@ -6,7 +6,7 @@ Author: Rock Johnson
 """
 from PIL import Image, ImageFile
 from collections import defaultdict
-import re, string, pickle as cPickle, zipfile, bz2
+import re, string, pickle as cPickle, zipfile, bz2, datetime, calendar
 import cv2, requests, numpy as np
 from xmlrpc.client import ServerProxy
 
@@ -193,6 +193,49 @@ def challenge_13():
     server = ServerProxy('http://www.pythonchallenge.com/pc/phonebook.php')
     print(server.phone('Bert'))
 
+def challenge_14():
+    wire = cv2.imread('wire.png')
+    new_img = np.zeros((100, 100, 3), np.uint8)
+    x = 0
+    y = 0
+    border_max = 99
+    border_min = 0
+
+    for i in range(10000):
+        new_img[y][x] = wire[0][i]
+        if x < border_max and y == border_min: # 上
+            x += 1
+        elif x == border_max and y < border_max: # 右
+            y += 1
+        elif x == border_max and y == border_max: # 右下角
+            x -= 1
+        elif x > border_min and x < border_max and y == border_max: # 下
+            x -= 1
+        elif x == border_min and y == border_max: # 左下角
+            y -= 1
+        elif x == border_min - 1 and y == border_max: # 左下角, 新的border_min
+            y -= 1
+        elif x == border_min - 1 and y < border_max and y > border_min: # 左
+            y -= 1
+        if x == border_min and y == border_max: # 左上角
+            border_min += 1
+        if x == border_min - 1 and y == border_min: # 左下角
+            border_max -= 1
+
+    cv2.imshow('new_img', new_img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+
+def challenge_15():
+    years = []
+    for year in range(1006, 2006, 10):
+        day = datetime.date(year, 1, 27)
+        if calendar.isleap(year) and day.weekday() == 1:
+            years.append(year)
+
+    print(years[-2])
+
+
 if __name__ == '__main__':
     # s = "g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj"
     # print(challenge_1('map'))
@@ -200,4 +243,4 @@ if __name__ == '__main__':
     # t = l.maketrans(l, l[2:] + l[:2])
     # print(s.translate(t))
 
-    challenge_9()
+    challenge_15()
