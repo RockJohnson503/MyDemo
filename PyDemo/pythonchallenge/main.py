@@ -6,9 +6,9 @@ Author: Rock Johnson
 """
 from PIL import Image, ImageFile
 from collections import defaultdict
+from xmlrpc.client import ServerProxy
 import re, string, pickle as cPickle, zipfile, bz2, datetime, calendar
 import cv2, requests, numpy as np
-from xmlrpc.client import ServerProxy
 
 def challenge_1(s):
     chars = string.ascii_lowercase

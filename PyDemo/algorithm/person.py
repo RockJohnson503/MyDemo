@@ -22,7 +22,8 @@ class Person:
 
     @property
     def friends(self):
-        return self.__friends
+        for friend in self.__friends:
+            yield friend
 
     def remove_friend(self, friend):
         if not isinstance(friend, Person):
@@ -79,6 +80,6 @@ if __name__ == '__main__':
     claire.add_friends([thom, jonny, me])
     jonny.add_friend(july)
 
-    for friend in me.relation_ship('学生', True):
-        print(friend)
+    for friend in peggy.relation_ship('老师', True):
+        print(friend, friend.job)
     # print(me.relation_ship('学生'))
