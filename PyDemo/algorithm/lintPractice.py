@@ -10,10 +10,9 @@ from itertools import combinations
 def kthLargestElement(k, A):
     return quik_sort_helper(A, 0, len(A) - 1, k)
 
-
 def quik_sort_helper(lst, left, right, k):
     if left <= right:
-        pivot = partition(lst, left, right)
+        pivot = partition(lst, left, right, 'desc')
         if pivot + 1 == k:
             return lst[pivot]
         elif pivot + 1 > k:
@@ -21,17 +20,29 @@ def quik_sort_helper(lst, left, right, k):
         else:
             return quik_sort_helper(lst, pivot + 1, right, k)
 
-
-def partition(lst, left, right):
+def partition(lst, left, right, order='asc'):
     mid = (left + right) // 2
     lst[mid], lst[right] = lst[right], lst[mid]
     boundary = left
     for i in range(left, right):
-        if lst[i] > lst[right]:
+        flag = lst[i] < lst[right] if order == 'asc' else lst[i] > lst[right]
+        if flag:
             lst[i], lst[boundary] = lst[boundary], lst[i]
             boundary += 1
     lst[right], lst[boundary] = lst[boundary], lst[right]
     return boundary
+
+
+# 数组划分
+def partition_array(nums, k):
+    needles = [{'left': 0, 'right': len(nums) - 1}]
+    while needles:
+        needle = needles.pop()
+        privot = partition(nums, needle['left'], needle['right'])
+        if needle['left'] < privot - 1:
+            needles.append({'left': needle['left'], 'right': privot - 1})
+        if needle['right'] > privot + 1:
+            needles.append({'left': privot + 1, 'right': needle['right']})
 
 
 # 合并排序数组2
@@ -330,7 +341,19 @@ def Spartition(lst, left, right):
     lst[right], lst[boundary] = lst[boundary], lst[right]
     return boundary
 
+# 旋转字符串2
+def rotate_string2(strs, left, right):
+    first = left - right
+    first %= len(strs)
+
+    return strs[first:] + strs[:first]
+
+# 四的乘方
+def is_power_of_four(num):
+    return num > 0 and not num & (num - 1) and num & 0X55555555 == num
+
 
 if __name__ == '__main__':
-    print(maxSlidingWindow([1,2,7,7,8], 3))
+    lst = [1, 2, 3, 4, 5, 6, 8, 9, 10, 7]
+    print(partition_array(lst, 10))
     pass

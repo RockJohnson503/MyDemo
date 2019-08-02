@@ -10,18 +10,11 @@ from xmlrpc.client import ServerProxy
 import re, string, pickle as cPickle, zipfile, bz2, datetime, calendar
 import cv2, requests, numpy as np
 
-def challenge_1(s):
-    chars = string.ascii_lowercase
-    res = ''
-    for char in s:
-        if re.match(r'[a-z]', char):
-            chari = chars.index(char)
-            if chari > 23:
-                chari -= 26
-            res += chars[chari + 2]
-        else:
-            res += char
-    return res
+def challenge_1():
+    s = "g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj"
+    l = string.ascii_lowercase
+    t = l.maketrans(l, l[2:] + l[:2])
+    print(s.translate(t))
 
 def challenge_2():
     char = requests.get('http://www.pythonchallenge.com/pc/def/ocr.html').text
@@ -136,7 +129,7 @@ def challenge_9():
     for i in get_pos(second):
         new_img[i[1], i[0]] = [0, 0, 255]
 
-    cv2.imshow('pythonchallenge2', new_img)
+    cv2.imshow('9', new_img)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
@@ -222,7 +215,7 @@ def challenge_14():
         if x == border_min - 1 and y == border_min: # 左下角
             border_max -= 1
 
-    cv2.imshow('new_img', new_img)
+    cv2.imshow('14', new_img)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
@@ -235,12 +228,38 @@ def challenge_15():
 
     print(years[-2])
 
+def challenge_16():
+    mozart = cv2.VideoCapture('mozart.gif')
+    ret, frame = mozart.read()
+    new_img = np.zeros(frame.shape, np.uint8)
+
+    # 是否有粉色线条
+    def is_pink_line(row, index):
+        for col in range(index, index + 5):
+            if index > len(row) - 5:
+                return False
+            for i, k in enumerate([255, 0, 255]):
+                if row[col][i] != k:
+                    return False
+        return index
+
+    # 读取原图
+    for ri, row in enumerate(frame):
+        for ci, col in enumerate(row):
+            line = is_pink_line(row, ci)
+            if line:
+                break
+        # 追加像素
+        new_img[ri] = np.append(row[line:len(row)], row[0:line], axis=0)
+
+    cv2.imshow('16', new_img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+
+def challenge_17():
+    cookies = requests.get('http://www.pythonchallenge.com/pc/return/romance.html', headers=HEADERS).cookies
+    print(dict(cookies))
+
 
 if __name__ == '__main__':
-    # s = "g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj"
-    # print(challenge_1('map'))
-    # l = string.ascii_lowercase
-    # t = l.maketrans(l, l[2:] + l[:2])
-    # print(s.translate(t))
-
-    challenge_15()
+    challenge_17()
