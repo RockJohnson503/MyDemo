@@ -4,6 +4,7 @@
 File: demo.py
 Author: Rock Johnson
 """
+from copy import copy
 from datetime import datetime
 from collections import defaultdict
 from random import randrange
@@ -197,6 +198,38 @@ def binary_recursive(lst, item, low=None, hight=None):
         return binary_recursive(lst, item, low, mid - 1)
     else:
         return binary_recursive(lst, item, mid + 1, hight)
+
+# 组合算法Ｃ(n, k)
+def combine(lst, l):
+    result = []
+    tmp = [0] * l
+    length = len(lst)
+    def next_num(li=0, ni=0):
+        if ni == l:
+            result.append(copy(tmp))
+            return
+        for lj in range(li, length):
+            tmp[ni] = lst[lj]
+            next_num(lj+1, ni+1)
+        next_num()
+    return result
+
+# 排列算法A(n, k)
+def permutation(lst,k):
+    result = []
+    tmp = [0] * k
+    def next_num(a, ni=0):
+        if ni == k:
+            result.append(copy(tmp))
+            return
+        for lj in a:
+            tmp[ni] = lj
+            b = a[:]
+            b.pop(a.index(lj))
+            next_num(b, ni+1)
+    c = lst[:]
+    next_num(c, 0)
+    return result
 
 if __name__ == '__main__':
     print(binary_recursive([i for i in range(100)], 50))
