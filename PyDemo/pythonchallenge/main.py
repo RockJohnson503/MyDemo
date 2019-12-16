@@ -4,11 +4,12 @@
 File: main.py
 Author: Rock Johnson
 """
+import requests
 from PIL import Image, ImageFile
 from collections import defaultdict
 from xmlrpc.client import ServerProxy
 import re, string, pickle as cPickle, zipfile, bz2, datetime, calendar
-import cv2, requests, numpy as np
+# import cv2, numpy as np
 
 def challenge_1():
     s = "g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj"
@@ -262,4 +263,4 @@ def challenge_17():
 
 
 if __name__ == '__main__':
-    challenge_17()
+    pass

@@ -1,2 +1,2 @@
 django==2.2
-mysqlslient==1.4.2.post1
+mysqlclient==1.4.2.post1
