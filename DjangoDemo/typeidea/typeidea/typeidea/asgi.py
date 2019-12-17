@@ -11,6 +11,7 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'typeidea.settings')
+profile = os.environ.get('TYPEIDEA_PROFILE', 'develop')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'typeidea.settings.%s' % profile)
 
 application = get_asgi_application()
