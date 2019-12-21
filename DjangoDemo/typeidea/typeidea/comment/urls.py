@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.urls import path
 
-from .views import LinkListView
+from .views import CommentView
 
 
-app_name = 'config'
+app_name = 'comment'
 urlpatterns = [
-    path('', LinkListView.as_view(), name='links'),
+    path('', CommentView.as_view(), name='index'),
 ]

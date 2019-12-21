@@ -1,0 +1,8 @@
+<ul>
+    {% for comment in comments %}
+        <li>
+            <a href="{{ comment.target }}">{{ comment.target.title }}</a>
+        </li>
+        {{ comment.nickname }} : {{ comment.content }}
+    {% endfor %}
+</ul>

@@ -13,16 +13,27 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf import settings
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, re_path, include
+from django.contrib.sitemaps.views import sitemap
 
+from blog.rss import LatestPostFeed
+from blog.sitemap import PostSitemap
 from .custom_site import custom_site
 
 
 urlpatterns = [
     path('admin/', custom_site.urls),
     path('super_admin/', admin.site.urls),
+    path('sitemap.xml', sitemap, {'sitemaps': {'posts': PostSitemap}}),
+    re_path(r'rss|feed/', LatestPostFeed(), name='rss'),
 
-    path('', include('blog.urls'), name='index'),
-    path('links/', include('config.urls'), name='config'),
+    path('', include('blog.urls')),
+    path('links/', include('config.urls')),
+    path('comment/', include('comment.urls')),
 ]
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns.append(path('__debug__/', include(debug_toolbar.urls)))

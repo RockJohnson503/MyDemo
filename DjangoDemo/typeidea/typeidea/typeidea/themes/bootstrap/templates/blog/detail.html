@@ -1,0 +1,25 @@
+{% extends './base.html' %}
+
+{% load comment_block %}
+
+{% block title %} {{ post.title }} {% endblock %}
+
+{% block extra_head %}
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/default.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+{% endblock %}
+
+{% block main %}
+    {% if post %}
+        <h1>{{ post.title }}</h1>
+        <div>
+            <span>分类：{{ post.category.name }}</span>
+            <span>作者：{{ post.owner.username }}</span>
+        </div>
+        <hr/>
+        <p>{% autoescape off %}{{ post.content_html }}{% endautoescape %}</p>
+        {% comment_block request.path %}
+    {% endif %}
+{% endblock %}
