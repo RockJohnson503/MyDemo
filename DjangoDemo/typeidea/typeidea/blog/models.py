@@ -18,7 +18,6 @@ class Category(models.Model):
     is_nav = models.BooleanField(default=False, verbose_name='是否为导航')
     owner = models.ForeignKey(User, verbose_name='作者', on_delete=models.CASCADE)
     created_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
-
     @classmethod
     def get_navs(cls):
         categories = cls.objects.filter(status=cls.STATUS_NORMAL)
@@ -79,7 +78,7 @@ class Post(models.Model):
     owner = models.ForeignKey(User, verbose_name='作者', on_delete=models.CASCADE)
     pv = models.PositiveIntegerField(default=0)
     uv = models.PositiveIntegerField(default=0)
-    created_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
+    created_time = models.DateTimeField('创建时间', auto_now_add=True)
 
     @staticmethod
     def get_by_tag(tag_id):

@@ -21,6 +21,7 @@ from .apis import PostViewSet, CategoryViewSet
 from .views import (
     TagView, IndexView, SearchView, AuthorView,
     CategoryView, PostDetailView,
+    react,
 )
 
 
@@ -39,4 +40,7 @@ urlpatterns = [
     # api
     path('api/', include(router.urls)),
     path('api/docs/', include_docs_urls(title='typeidea apis')),
+
+    # test
+    path('react/', react),
 ]

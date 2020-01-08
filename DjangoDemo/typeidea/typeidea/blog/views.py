@@ -2,11 +2,15 @@ from datetime import  date
 
 from django.db.models import Q, F
 from django.core.cache import cache
-from django.shortcuts import get_object_or_404
+from django.shortcuts import render, get_object_or_404
 from django.views.generic import DetailView, ListView
 
 from config.models import SideBar
 from .models import Tag, Post, Category
+
+
+def react(request):
+    return render(request, 'react/index.html')
 
 
 class CommonViewMixin:
