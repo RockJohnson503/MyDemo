@@ -231,8 +231,21 @@ def permutation(lst,k):
     next_num(c, 0)
     return result
 
+# 背包问题
+def backPack(w, A):
+    unit = min(A.values())
+    row = int((w + 1) // unit)
+    col = len(A) + 1
+    keys = [key for key in A.keys()]
+    table = [[{'商品': [], '总价值': 0} for i in range(row)] for j in range(col)]
+    for i in range(1, col):
+        for j in range(1, row):
+            cur_w = int(A[keys[j - 1]][0] // unit)
+            return max(table[i - 1][j]['总价值'], A[keys][j - 1][1] + table[i - 1][j - cur_w]['总价值'])
+
+
 if __name__ == '__main__':
-    print(binary_recursive([i for i in range(100)], 50))
+    print(backPack(4, {'吉他': [1, 1500], '音箱': [4, 3000], '笔记本电脑': [3, 2000], '项链': [0.5, 1000]}))
     # print(fib(39))
     # print(dag_sp({"a": {"b": 2, "f": 9}, "b": {"d": 2, "c": 1, "f": 6}, "c": {"d": 7}, "d": {"e": 2, "f": 3}, "e": {"f": 4}, "f": {}}, "b", "c"))
     # M = [2, 2, 10, 5, 3, 5, 7, 4]
